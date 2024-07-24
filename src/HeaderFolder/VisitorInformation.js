@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function VisitorInformation() {
   return (
-    <div>VisitorInformation</div>
+    <div>VisitorInformation ZOO</div>
   )
 }
