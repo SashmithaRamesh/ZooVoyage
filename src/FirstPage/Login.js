@@ -31,7 +31,7 @@ const Login = () => {
       navigate('/profile')
     } else {
       alert('Account not found please register')
-      navigate('/reg')
+      navigate('/register')
     }
   };
 
@@ -49,6 +49,7 @@ const Login = () => {
           <input 
             placeholder='e-mail'
             type="email" 
+            name='email'
             value={loginDetails.email} 
             onChange={handleInputChange} 
             required 
@@ -58,7 +59,8 @@ const Login = () => {
           
           <input 
             placeholder='password'
-            type="password" 
+            type="text" 
+            name='password'
             value={loginDetails.password} 
             onChange={handleInputChange} 
             required 

@@ -63,7 +63,8 @@ const Register = () => {
         <div className="form-group">
           <input 
             placeholder='username'
-            type="text" 
+            type="text"
+            name='username' 
             value={signupDetails.username} 
             onChange={handleInputChange} 
             required 
@@ -73,6 +74,7 @@ const Register = () => {
           <input 
             placeholder='mobile number'
             type="tel" 
+            name='contact'
             value={signupDetails.contact} 
             onChange={handleInputChange} 
             pattern="[0-9]{10}"
@@ -83,6 +85,7 @@ const Register = () => {
           <input 
             placeholder='e-mail'
             type="email" 
+            name='email'
             value={signupDetails.email} 
             onChange={handleInputChange} 
             required 
@@ -92,6 +95,7 @@ const Register = () => {
           <input 
             placeholder='password'
             type="password" 
+            name='password'
             value={signupDetails.password} 
             onChange={handleInputChange} 
             required 
