@@ -5,6 +5,7 @@ export default function Contact() {
   return (
     <div className='ved'>
       <video src={vedio} autoPlay loop muted/>
+      <h>Leo</h>
     </div>
   )
 }
