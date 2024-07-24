@@ -1,0 +1,74 @@
+.login-container {
+  background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('https://t3.ftcdn.net/jpg/06/03/75/96/360_F_603759622_DTpNhFkYCXjNCPp9b5w9xNFrMxY6o0pj.jpg') no-repeat center center/cover;
+    
+  }
+  
+  .login-form {
+    
+    padding-right: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 350px;
+  }
+  
+  .login-form h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #333;
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    color: #FFC57C;
+    margin-right: 240px;
+  }
+  
+  .form-group input {
+    width: 50%;
+    max-width: 200px;
+    border: 1px solid #FFC57C;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-left: 10px;
+  }
+  
+  .login-button {
+    width: 40%;
+    padding: 10px;
+    background-color: #D72315;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .login-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .register-link {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .register-link a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .register-link a:hover {
+    text-decoration: underline;
+  }
+  
