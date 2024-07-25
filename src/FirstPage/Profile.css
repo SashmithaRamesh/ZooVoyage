@@ -1,6 +1,14 @@
 /* Profile.css */
 .prof{
-    background-image: url("https://images.pexels.com/photos/1327405/pexels-photo-1327405.jpeg?auto=compress&cs=tinysrgb&w=600");
+    /* background-image: url("https://images.pexels.com/photos/1327405/pexels-photo-1327405.jpeg?auto=compress&cs=tinysrgb&w=600"); */
+    /* background-image: url("https://images.pexels.com/photos/1327405/pexels-photo-1327405.jpeg?auto=compress&cs=tinysrgb&w=600") no-repeat center center/cover; */
+    position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url("https://images.pexels.com/photos/1327405/pexels-photo-1327405.jpeg?auto=compress&cs=tinysrgb&w=600") no-repeat center center/cover;
+  overflow: hidden;
 }
 
 .profile-container {
@@ -18,6 +26,7 @@
   }
   
   .profile-container h2 {
+    
     text-align: center;
     margin-bottom: 20px;
     color: #2c3e50;
@@ -26,6 +35,7 @@
   .profile-form {
     display: flex;
     flex-direction: column;
+    
     align-items: center;
   }
   
