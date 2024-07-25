@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f9c586;
+  background: url(LoginImage.png) no-repeat center center/cover;
   overflow: hidden;
 }
 
@@ -14,7 +14,8 @@
     border-radius: 8px;
     box-shadow: 0 0 10px #4A0A1A;
     width: 100%;
-    max-width: 350px;
+    width: 400px;
+    height: 300px;
   }
   
   .login-form h2 {
