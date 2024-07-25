@@ -5,13 +5,13 @@ import Register from './FirstPage/Register';
 import Blog from './Dashboard/Blog';
 import AboutUs from './HeaderFolder/AboutUs';
 import Adoptation from './HeaderFolder/Adoptation';
-import AnimalBirds from './HeaderFolder/AnimalBirds';
 import Contact from './HeaderFolder/Contact';
 import VisitorInformation from './HeaderFolder/VisitorInformation';
 import ZooEvents from './HeaderFolder/ZooEvents';
 import ZooDonation from './Donation/ZooDonation';
 import ZooLocation from './Location/ZooLocation';
 import { ChakraProvider, theme } from '@chakra-ui/react';
+import VideoCarousel from './components/VideoCarousel';
 
 function App() {
   return (
@@ -24,12 +24,13 @@ function App() {
             <Route path='/register' element={<Register />} />
             <Route path='/about' element={<AboutUs />} />
             <Route path='/adopt' element={<Adoptation />} />
-            <Route path='/animal' element={<AnimalBirds />} />
             <Route path='/contact' element={<Contact />} />
             <Route path='/visitor' element={<VisitorInformation />} />
             <Route path='/events' element={<ZooEvents />} />
             <Route path='/donation' element={<ZooDonation />} />
             <Route path='/location' element={<ZooLocation />} />
+            <Route path='/video' element={<VideoCarousel />} />
+            
           </Routes>
         </BrowserRouter>
       </div>
