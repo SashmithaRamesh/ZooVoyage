@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
 
 function Header(props) {
-  const { sections, title } = props;
+  const { sections} = props;
 
   return (
     <React.Fragment>
@@ -23,7 +23,6 @@ function Header(props) {
               '&:hover': {
                 borderColor: '#F77D00',
                 backgroundColor: 'rgba(215, 35, 21, 0.04)',
-                color: '#F77D00',
               },
             }}
           >
