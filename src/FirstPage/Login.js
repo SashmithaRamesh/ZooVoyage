@@ -25,7 +25,7 @@ const Login = () => {
 
     if (foundUser) {
       setUser(foundUser);
-      navigate('/profile');
+      navigate('/');
     } else {
       alert('Account not found. Please register.');
       navigate('/register');
