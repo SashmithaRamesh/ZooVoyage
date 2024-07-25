@@ -25,7 +25,7 @@ const Login = () => {
 
     if (foundUser) {
       setUser(foundUser);
-      navigate('/');
+      navigate('/profile');
     } else {
       alert('Account not found. Please register.');
       navigate('/register');
@@ -39,7 +39,6 @@ const Login = () => {
   return (
     <div className="login-container">
       <form onSubmit={handleLogin} className="login-form">
-        <br></br>
         <h2>LOGIN</h2>
         <div className="form-group">
           <input 
@@ -62,9 +61,8 @@ const Login = () => {
           />
         </div>
         <button type="submit" className="login-button">Login</button>
-        <br />
         <div className="register-link">
-          <p className='z'> New User?&nbsp;&nbsp;<Link to="/register">Register here</Link></p>
+          <p>New User? <Link to="/register">Register here</Link></p>
         </div>
       </form>
     </div>

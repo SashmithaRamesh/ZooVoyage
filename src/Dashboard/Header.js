@@ -8,12 +8,28 @@ import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
 
 function Header(props) {
-  const { sections} = props;
+  const { sections, title } = props;
 
   return (
     <React.Fragment>
       <Toolbar sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Button size="small" sx={{ color: '#4A0A1A' }}>Profile</Button>
+        <Link to="/profile" style={{ textDecoration: 'none', color: '#4A0A1A' }}>
+          <Button
+            variant="outlined"
+            size="small"
+            sx={{
+              borderColor: '#4A0A1A',
+              color: '#BF1D1A',
+              '&:hover': {
+                borderColor: '#F77D00',
+                backgroundColor: 'rgba(215, 35, 21, 0.04)',
+                color: '#F77D00',
+              },
+            }}
+          >
+            Profile
+          </Button>
+        </Link>
         <Typography
           component="h2"
           variant="h5"
@@ -22,42 +38,42 @@ function Header(props) {
           noWrap
           sx={{ flex: 1 }}
         >
-          ZOO VOYAGE
+          {title}
         </Typography>
-
         <IconButton>
-          <SearchIcon sx={{ color: '#4A0A1A' }}/>
+          <SearchIcon sx={{ color: '#4A0A1A' }} />
         </IconButton>
-
-        <Link to='/login'>
-          <Button 
-            variant="outlined" 
-            size="small" 
+        <Link to='/login' style={{ textDecoration: 'none' }}>
+          <Button
+            variant="outlined"
+            size="small"
             sx={{
-            borderColor: '#4A0A1A', 
-            color: '#BF1D1A',
-            '&:hover': {
-            borderColor: '#F77D00',
-            backgroundColor: 'rgba(215, 35, 21, 0.04)'
-          }}}>
-          Login
+              borderColor: '#4A0A1A',
+              color: '#BF1D1A',
+              '&:hover': {
+                borderColor: '#F77D00',
+                backgroundColor: 'rgba(215, 35, 21, 0.04)',
+              },
+            }}
+          >
+            Login
           </Button>
-        </Link> 
-
+        </Link>
         &nbsp;&nbsp;
-
-        <Link to='/register'>
-          <Button 
-            variant="outlined" 
-            size="small" 
+        <Link to='/register' style={{ textDecoration: 'none' }}>
+          <Button
+            variant="outlined"
+            size="small"
             sx={{
-            borderColor: '#4A0A1A', 
-            color: '#BF1D1A',
-            '&:hover': {
-            borderColor: '#F77D00',
-            backgroundColor: 'rgba(215, 35, 21, 0.04)'
-          }}}>
-          Sign up
+              borderColor: '#4A0A1A',
+              color: '#BF1D1A',
+              '&:hover': {
+                borderColor: '#F77D00',
+                backgroundColor: 'rgba(215, 35, 21, 0.04)',
+              },
+            }}
+          >
+            Sign up
           </Button>
         </Link>
       </Toolbar>
@@ -69,12 +85,10 @@ function Header(props) {
       >
         {sections.map((section) => (
           <Link
-            color="inherit"
-            noWrap
             key={section.title}
-            variant="body2"
             to={section.url}
-            sx={{ p: 1, flexShrink: 0 }}
+            style={{ color: '#4A0A1A', textDecoration: 'none', padding: '8px', flexShrink: 0 }}
+            variant="body2"
           >
             {section.title}
           </Link>
@@ -89,7 +103,7 @@ Header.propTypes = {
     PropTypes.shape({
       title: PropTypes.string.isRequired,
       url: PropTypes.string.isRequired,
-    }),
+    })
   ).isRequired,
   title: PropTypes.string.isRequired,
 };

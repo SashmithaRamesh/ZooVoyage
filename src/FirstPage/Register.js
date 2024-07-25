@@ -6,18 +6,18 @@ import './Register.css';
 
 const Register = () => {
   const navigate = useNavigate();
-  const [confirm, setConfirm] = useState(null);
+  const [confirm, setConfirm] = useState('');
   const [signupDetails, setSignupDetails] = useState({
-    username: "",
-    contact: "",
-    email: "",
-    password: "",
+    username: '',
+    contact: '',
+    email: '',
+    password: '',
   });
   const { setUser } = useContext(UserContext);
 
   const checkUserExists = async (username) => {
     const response = await axios.get('http://localhost:8080/get');
-    return response.data.some(user => user.username === username);
+    return response.data.some((user) => user.username === username);
   };
 
   const handleRegister = async (e) => {
@@ -34,13 +34,14 @@ const Register = () => {
       return;
     }
 
-    axios.post('http://localhost:8080/insert', signupDetails)
-      .then(response => {
+    axios
+      .post('http://localhost:8080/insert', signupDetails)
+      .then((response) => {
         console.log('Signup successful:', response.data);
-        setUser(response.data);
-        navigate('/');
+        setUser(response.data); // Set user details in context
+        navigate('/profile'); // Redirect to profile page after successful registration
       })
-      .catch(error => {
+      .catch((error) => {
         console.error('Signup error:', error);
       });
   };
@@ -58,22 +59,21 @@ const Register = () => {
       <form onSubmit={handleRegister} className="register-form">
         <h2>REGISTER</h2>
         <div className="form-group">
-        <input
-         placeholder='username'
-         type="text"
-         name='username'
-        value={signupDetails.username}
-         onChange={handleInputChange}
-         pattern='[a-zA-Z]*'
-         required
-        />
-
+          <input
+            placeholder="username"
+            type="text"
+            name="username"
+            value={signupDetails.username}
+            onChange={handleInputChange}
+            pattern="[a-zA-Z]*"
+            required
+          />
         </div>
         <div className="form-group">
           <input
-            placeholder='mobile number'
+            placeholder="mobile number"
             type="tel"
-            name='contact'
+            name="contact"
             value={signupDetails.contact}
             onChange={handleInputChange}
             pattern="[0-9]{10}"
@@ -82,9 +82,9 @@ const Register = () => {
         </div>
         <div className="form-group">
           <input
-            placeholder='e-mail'
+            placeholder="e-mail"
             type="email"
-            name='email'
+            name="email"
             value={signupDetails.email}
             onChange={handleInputChange}
             required
@@ -92,9 +92,9 @@ const Register = () => {
         </div>
         <div className="form-group">
           <input
-            placeholder='password'
+            placeholder="password"
             type="password"
-            name='password'
+            name="password"
             value={signupDetails.password}
             onChange={handleInputChange}
             required
@@ -102,7 +102,7 @@ const Register = () => {
         </div>
         <div className="form-group">
           <input
-            placeholder='confirm password'
+            placeholder="confirm password"
             type="password"
             name="confirmPassword"
             value={confirm}
@@ -110,10 +110,11 @@ const Register = () => {
             required
           />
         </div>
-        <button type="submit" className="register-button">Register</button>
-        <br />
+        <button type="submit" className="register-button">
+          Register
+        </button>
         <div className="login-link">
-          Already have an account? <Link to="/login">Login here</Link>
+          <p>Already have an account? <Link to="/login">Login here</Link></p>
         </div>
       </form>
     </div>

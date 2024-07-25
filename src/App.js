@@ -14,6 +14,7 @@ import ZooLocation from './Location/ZooLocation';
 import { ChakraProvider, theme } from '@chakra-ui/react';
 import VideoCarousel from './components/VideoCarousel';
 import { UserProvider } from './FirstPage/UserContext';
+import Profile from './FirstPage/Profile';
 
 function App() {
   return (
@@ -33,6 +34,8 @@ function App() {
               <Route path='/donation' element={<ZooDonation />} />
               <Route path='/location' element={<ZooLocation />} />
               <Route path='/video' element={<VideoCarousel />} />
+              <Route path='/profile' element={<Profile />} />
+
             </Routes>
           </BrowserRouter>
         </div>
