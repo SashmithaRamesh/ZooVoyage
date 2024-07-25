@@ -21,7 +21,7 @@ const DashBoard = () => {
       <main>
         <section className="intro-section">
           <h2>Welcome to Zoo Ticket Booking</h2>
-          <p>Book your tickets easily and enjoy a wonderful day at the zoo!</p>
+          <p>Book your tickets easily and enjoy a wonderful day at the zoo!  </p>
         </section>
       </main>
     </div>
