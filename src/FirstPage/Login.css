@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: url(LoginImage.png) no-repeat center center/cover;
+  background-color: #f9c586;
   overflow: hidden;
 }
 

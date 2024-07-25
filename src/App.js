@@ -7,7 +7,7 @@ import Blog from './Dashboard/Blog';
 import AboutUs from './HeaderFolder/AboutUs';
 import Adoptation from './HeaderFolder/Adoptation';
 import Contact from './HeaderFolder/Contact';
-import VisitorInformation from './HeaderFolder/VisitorInformation';
+import NearbyResort from './HeaderFolder/NearbyResort';
 import ZooEvents from './HeaderFolder/ZooEvents';
 import ZooDonation from './Donation/ZooDonation';
 import ZooLocation from './Location/ZooLocation';
@@ -28,7 +28,7 @@ function App() {
               <Route path='/about' element={<AboutUs />} />
               <Route path='/adopt' element={<Adoptation />} />
               <Route path='/contact' element={<Contact />} />
-              <Route path='/visitor' element={<VisitorInformation />} />
+              <Route path='/resort' element={<NearbyResort />} />
               <Route path='/events' element={<ZooEvents />} />
               <Route path='/donation' element={<ZooDonation />} />
               <Route path='/location' element={<ZooLocation />} />

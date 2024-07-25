@@ -14,7 +14,7 @@ import Footer from './Footer';
 
 const sections = [
   { title: 'ABOUT US', url: '/about'},
-  { title: 'VISITOR INFORMATION', url: '/visitor' },
+  { title: 'NEARBY RESORT ', url: '/resort' },
   { title: 'ANIMAL AND BIRDS', url: '/video' },
   { title: 'ZOO EVENTS', url: '/events' },
   { title: 'ANIMAL ADOPTATION', url: '/adopt' },
