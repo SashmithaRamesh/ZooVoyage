@@ -1,5 +1,6 @@
 .login-container {
-  
+
+     box-shadow: 0 0 10px rgba(249, 251, 251, 0.333);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,7 +12,7 @@
   .login-form {
     padding-right: 10px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px #FB6800;
     width: 100%;
     max-width: 350px;
   }

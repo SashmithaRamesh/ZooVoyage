@@ -67,6 +67,7 @@ const Register = () => {
             name='username' 
             value={signupDetails.username} 
             onChange={handleInputChange} 
+            pattern='[a-z][A-Z]'
             required 
           />
         </div>
