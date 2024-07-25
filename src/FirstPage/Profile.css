@@ -25,7 +25,7 @@
   .profile-container h2 {
     text-align: center;
     margin-bottom: 20px;
-    color: #2c3e50;
+    color: #eef1f5;
   }
   
   .profile-form {
@@ -76,7 +76,7 @@
   .profile-table td:first-child {
     text-align: right;
     font-weight: bold;
-    color: #34495e;
+    color: #e3ecf5;
   }
   
   .profile-table td:last-child {
