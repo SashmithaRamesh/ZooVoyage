@@ -35,7 +35,7 @@ function Header(props) {
             size="small" 
             sx={{
             borderColor: '#4A0A1A', 
-            color: '#F26400',
+            color: '#BF1D1A',
             '&:hover': {
             borderColor: '#F77D00',
             backgroundColor: 'rgba(215, 35, 21, 0.04)'
