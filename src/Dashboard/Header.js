@@ -13,11 +13,11 @@ function Header(props) {
   return (
     <React.Fragment>
       <Toolbar sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Button size="small">Subscribe</Button>
+        <Button size="small" sx={{ color: '#4A0A1A' }}>Profile</Button>
         <Typography
           component="h2"
           variant="h5"
-          color="inherit"
+          color="#4A0A1A"
           align="center"
           noWrap
           sx={{ flex: 1 }}
@@ -26,21 +26,39 @@ function Header(props) {
         </Typography>
 
         <IconButton>
-          <SearchIcon />
+          <SearchIcon sx={{ color: '#4A0A1A' }}/>
         </IconButton>
 
         <Link to='/login'>
-        <Button variant="outlined" size="small">
+          <Button 
+            variant="outlined" 
+            size="small" 
+            sx={{
+            borderColor: '#4A0A1A', 
+            color: '#F26400',
+            '&:hover': {
+            borderColor: '#F77D00',
+            backgroundColor: 'rgba(215, 35, 21, 0.04)'
+          }}}>
           Login
-        </Button>
+          </Button>
         </Link> 
 
         &nbsp;&nbsp;
 
         <Link to='/register'>
-        <Button variant="outlined" size="small">
+          <Button 
+            variant="outlined" 
+            size="small" 
+            sx={{
+            borderColor: '#4A0A1A', 
+            color: '#BF1D1A',
+            '&:hover': {
+            borderColor: '#F77D00',
+            backgroundColor: 'rgba(215, 35, 21, 0.04)'
+          }}}>
           Sign up
-        </Button>
+          </Button>
         </Link>
       </Toolbar>
 

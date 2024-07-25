@@ -1,18 +1,18 @@
 .login-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url(LoginImage.png) no-repeat center center/cover;
+  overflow: hidden;
+}
 
-     box-shadow: 0 0 10px rgba(249, 251, 251, 0.333);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: url('https://t3.ftcdn.net/jpg/06/03/75/96/360_F_603759622_DTpNhFkYCXjNCPp9b5w9xNFrMxY6o0pj.jpg') no-repeat center center/cover;
-    
-  }
   
   .login-form {
     padding-right: 10px;
     border-radius: 8px;
-    box-shadow: 0 0 10px #FB6800;
+    box-shadow: 0 0 10px #4A0A1A;
     width: 100%;
     max-width: 350px;
   }

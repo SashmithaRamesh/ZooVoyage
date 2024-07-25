@@ -59,18 +59,26 @@ const sidebar = {
   ],
 };
 
-// TODO remove, this demo shouldn't need to reset the theme.
-const defaultTheme = createTheme();
+const customTheme = createTheme({
+  palette: {
+    background: {
+      default: '#fadfbe', // Customize the default background color
+    },
+  },
+  typography: {
+    fontFamily: 'Arial, sans-serif', // Customize the default font family
+  },
+});
 
 export default function Blog() {
   return (
-    <ThemeProvider theme={defaultTheme}>
+    <ThemeProvider theme={customTheme} className="main-background">
       <CssBaseline />
 
       <Container maxWidth="lg">
         <Header title="Blog" sections={sections} />
 
-        <main background-image='https://t3.ftcdn.net/jpg/06/03/75/96/360_F_603759622_DTpNhFkYCXjNCPp9b5w9xNFrMxY6o0pj.jpg'>
+        <main>
           <MainFeaturedPost post={mainFeaturedPost} />
           <Grid container spacing={4}>
             {featuredPosts.map((post) => (
