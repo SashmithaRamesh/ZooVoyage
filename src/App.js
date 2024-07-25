@@ -13,7 +13,7 @@ import ZooDonation from './Donation/ZooDonation';
 import ZooLocation from './Location/ZooLocation';
 import { ChakraProvider, theme } from '@chakra-ui/react';
 import VideoCarousel from './components/VideoCarousel';
-import { UserProvider } from './UserContext';
+import { UserProvider } from './FirstPage/UserContext';
 
 function App() {
   return (
