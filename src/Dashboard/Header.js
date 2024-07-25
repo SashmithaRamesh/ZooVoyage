@@ -38,7 +38,7 @@ function Header(props) {
           noWrap
           sx={{ flex: 1 }}
         >
-          {title}
+          ZOO VOYAGE
         </Typography>
         <IconButton>
           <SearchIcon sx={{ color: '#4A0A1A' }} />
