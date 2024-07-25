@@ -11,6 +11,7 @@ import VisitorInformation from './HeaderFolder/VisitorInformation';
 import ZooEvents from './HeaderFolder/ZooEvents';
 import ZooDonation from './Donation/ZooDonation';
 import ZooLocation from './Location/ZooLocation';
+import { ChakraProvider, theme } from '@chakra-ui/react'
 
 function App() {
   return (
@@ -27,9 +28,12 @@ function App() {
                 <Route path='/visitor' element={<VisitorInformation/>}></Route>
                 <Route path='/events' element={<ZooEvents/>}></Route>
                 <Route path='/donation' element={<ZooDonation/>}></Route>
-                <Route path='/location' element={<ZooLocation/>}></Route>
+                
           </Routes>
       </BrowserRouter>
+      <ChakraProvider theme={theme}>
+          <ZooLocation/>
+      </ChakraProvider>
     </div>
   );
 }

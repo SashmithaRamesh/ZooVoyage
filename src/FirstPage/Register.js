@@ -105,6 +105,7 @@ const Register = () => {
           <input 
             placeholder='confirm password'
             type="password" 
+            name="confirmPassword"
             value={confirm} 
             onChange={handleConfirmPassword} 
             required 

@@ -1,78 +1,152 @@
-import React, { useState } from 'react';
-import { GoogleMap, LoadScript } from '@react-google-maps/api';
-import PlacesAutocomplete, { geocodeByAddress, getLatLng } from 'react-places-autocomplete';
+import {
+  Box,
+  Button,
+  ButtonGroup,
+  Flex,
+  HStack,
+  IconButton,
+  Input,
+  SkeletonText,
+  Text,
+} from '@chakra-ui/react'
+import { FaLocationArrow, FaTimes } from 'react-icons/fa'
 
-const containerStyle = {
-  width: '100%',
-  height: '400px'
-};
+import {
+  useJsApiLoader,
+  GoogleMap,
+  Marker,
+  Autocomplete,
+  DirectionsRenderer,
+} from '@react-google-maps/api'
+import { useRef, useState } from 'react'
+
+const center = { lat: 48.8584, lng: 2.2945 }
 
 function ZooLocation() {
-  const [center, setCenter] = useState({ lat: 28.704060, lng: 77.102493 });
-  const [address, setAddress] = useState('');
+  const { isLoaded } = useJsApiLoader({
+    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
+    libraries: ['places'],
+  })
 
-  const handleSelect = async (value) => {
-    const results = await geocodeByAddress(value);
-    const latLng = await getLatLng(results[0]);
-    setCenter(latLng);
-    setAddress(value);
-  };
+  const [map, setMap] = useState(/** @type google.maps.Map */ (null))
+  const [directionsResponse, setDirectionsResponse] = useState(null)
+  const [distance, setDistance] = useState('')
+  const [duration, setDuration] = useState('')
+
+  /** @type React.MutableRefObject<HTMLInputElement> */
+  const originRef = useRef()
+  /** @type React.MutableRefObject<HTMLInputElement> */
+  const destiantionRef = useRef()
+
+  if (!isLoaded) {
+    return <SkeletonText />
+  }
+
+  async function calculateRoute() {
+    if (originRef.current.value === '' || destiantionRef.current.value === '') {
+      return
+    }
+    // eslint-disable-next-line no-undef
+    const directionsService = new google.maps.DirectionsService()
+    const results = await directionsService.route({
+      origin: originRef.current.value,
+      destination: destiantionRef.current.value,
+      // eslint-disable-next-line no-undef
+      travelMode: google.maps.TravelMode.DRIVING,
+    })
+    setDirectionsResponse(results)
+    setDistance(results.routes[0].legs[0].distance.text)
+    setDuration(results.routes[0].legs[0].duration.text)
+  }
+
+  function clearRoute() {
+    setDirectionsResponse(null)
+    setDistance('')
+    setDuration('')
+    originRef.current.value = ''
+    destiantionRef.current.value = ''
+  }
 
   return (
-    <div>
-      <LoadScript
-        googleMapsApiKey="AIzaSyAJQ1K9KHiOHRaMTr6uCQTjhM4joZOrRLY"
-        libraries={['places']}
-      >
-        <PlacesAutocomplete
-          value={address}
-          onChange={setAddress}
-          onSelect={handleSelect}
-        >
-          {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
-            <div>
-              <input
-                {...getInputProps({
-                  placeholder: 'Search Places ...',
-                  className: 'location-search-input',
-                })}
-              />
-              <div className="autocomplete-dropdown-container">
-                {loading && <div>Loading...</div>}
-                {suggestions.map(suggestion => {
-                  const className = suggestion.active
-                    ? 'suggestion-item--active'
-                    : 'suggestion-item';
-                  const style = suggestion.active
-                    ? { backgroundColor: '#fafafa', cursor: 'pointer' }
-                    : { backgroundColor: '#ffffff', cursor: 'pointer' };
-                  return (
-                    <div
-                      {...getSuggestionItemProps(suggestion, {
-                        className,
-                        style,
-                      })}
-                    >
-                      <span>{suggestion.description}</span>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          )}
-        </PlacesAutocomplete>
-
+    <Flex
+      position='relative'
+      flexDirection='column'
+      alignItems='center'
+      h='100vh'
+      w='100vw'
+    >
+      <Box position='absolute' left={0} top={0} h='100%' w='100%'>
+        {/* Google Map Box */}
         <GoogleMap
-          mapContainerStyle={containerStyle}
           center={center}
-          zoom={10}
+          zoom={15}
+          mapContainerStyle={{ width: '100%', height: '100%' }}
+          /*options={{
+            zoomControl: false,
+            streetViewControl: false,
+            mapTypeControl: false,
+            fullscreenControl: false,
+          }}*/
+          onLoad={map => setMap(map)}
         >
-          { /* Child components, such as markers, info windows, etc. */ }
-          <></>
+          <Marker position={center} />
+          {directionsResponse && (
+            <DirectionsRenderer directions={directionsResponse} />
+          )}
         </GoogleMap>
-      </LoadScript>
-    </div>
-  );
+      </Box>
+      <Box
+        p={4}
+        borderRadius='lg'
+        m={4}
+        bgColor='white'
+        shadow='base'
+        minW='container.md'
+        zIndex='1'
+      >
+        <HStack spacing={2} justifyContent='space-between'>
+          <Box flexGrow={1}>
+            <Autocomplete>
+              <Input type='text' placeholder='Origin' ref={originRef} />
+            </Autocomplete>
+          </Box>
+          <Box flexGrow={1}>
+            <Autocomplete>
+              <Input
+                type='text'
+                placeholder='Destination'
+                ref={destiantionRef}
+              />
+            </Autocomplete>
+          </Box>
+
+          <ButtonGroup>
+            <Button colorScheme='pink' type='submit' onClick={calculateRoute}>
+              Calculate Route
+            </Button>
+            <IconButton
+              aria-label='center back'
+              icon={<FaTimes />}
+              onClick={clearRoute}
+            />
+          </ButtonGroup>
+        </HStack>
+        <HStack spacing={4} mt={4} justifyContent='space-between'>
+          <Text>Distance: {distance} </Text>
+          <Text>Duration: {duration} </Text>
+          <IconButton
+            aria-label='center back'
+            icon={<FaLocationArrow />}
+            isRound
+            onClick={() => {
+              map.panTo(center)
+              map.setZoom(15)
+            }}
+          />
+        </HStack>
+      </Box>
+    </Flex>
+  )
 }
 
-export default React.memo(ZooLocation);
+export default ZooLocation
