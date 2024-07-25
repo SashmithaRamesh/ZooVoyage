@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Login from './FirstPage/Login';
 import Register from './FirstPage/Register';
@@ -11,30 +11,29 @@ import VisitorInformation from './HeaderFolder/VisitorInformation';
 import ZooEvents from './HeaderFolder/ZooEvents';
 import ZooDonation from './Donation/ZooDonation';
 import ZooLocation from './Location/ZooLocation';
-import { ChakraProvider, theme } from '@chakra-ui/react'
+import { ChakraProvider, theme } from '@chakra-ui/react';
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
+    <ChakraProvider theme={theme}>
+      <div className="App">
+        <BrowserRouter>
           <Routes>
-                <Route path='/' element={<Blog/>}></Route>
-                <Route path='/login' element={<Login/>}></Route>
-                <Route path='/register' element={<Register/>}></Route>
-                <Route path='/about' element={<AboutUs/>}></Route>
-                <Route path='/adopt' element={<Adoptation/>}></Route>
-                <Route path='/animal' element={<AnimalBirds/>}></Route>
-                <Route path='/contact' element={<Contact/>}></Route>
-                <Route path='/visitor' element={<VisitorInformation/>}></Route>
-                <Route path='/events' element={<ZooEvents/>}></Route>
-                <Route path='/donation' element={<ZooDonation/>}></Route>
-                
+            <Route path='/' element={<Blog />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/register' element={<Register />} />
+            <Route path='/about' element={<AboutUs />} />
+            <Route path='/adopt' element={<Adoptation />} />
+            <Route path='/animal' element={<AnimalBirds />} />
+            <Route path='/contact' element={<Contact />} />
+            <Route path='/visitor' element={<VisitorInformation />} />
+            <Route path='/events' element={<ZooEvents />} />
+            <Route path='/donation' element={<ZooDonation />} />
+            <Route path='/location' element={<ZooLocation />} />
           </Routes>
-      </BrowserRouter>
-      <ChakraProvider theme={theme}>
-          <ZooLocation/>
-      </ChakraProvider>
-    </div>
+        </BrowserRouter>
+      </div>
+    </ChakraProvider>
   );
 }
 
