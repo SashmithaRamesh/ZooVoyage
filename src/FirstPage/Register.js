@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { UserContext } from '../UserContext';
+import { UserContext } from './UserContext';
 import './Register.css';
 
 const Register = () => {
