@@ -70,7 +70,7 @@ export default function Blog() {
       <Container maxWidth="lg">
         <Header title="Blog" sections={sections} />
 
-        <main>
+        <main background-image='https://t3.ftcdn.net/jpg/06/03/75/96/360_F_603759622_DTpNhFkYCXjNCPp9b5w9xNFrMxY6o0pj.jpg'>
           <MainFeaturedPost post={mainFeaturedPost} />
           <Grid container spacing={4}>
             {featuredPosts.map((post) => (
