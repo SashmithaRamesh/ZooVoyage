@@ -1,9 +1,12 @@
 import React, { useState, useContext } from 'react';
+import {  useNavigate } from 'react-router-dom';
+
 import { UserContext } from './UserContext';
 import axios from 'axios';
 import './Profile.css';
 
 const Profile = () => {
+    const navigate = useNavigate();
   const { user, setUser } = useContext(UserContext);
   const [editedUser, setEditedUser] = useState({ ...user });
 
@@ -17,6 +20,7 @@ const Profile = () => {
       const response = await axios.put(`http://localhost:8080/update/${user.id}`, editedUser);
       setUser(response.data); // Assuming the response contains updated user data
       alert('Changes saved successfully!');
+      navigate('/');
     } catch (error) {
       console.error('Error saving changes:', error);
       alert('Failed to save changes. Please try again later.');
