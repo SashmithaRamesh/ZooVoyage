@@ -1,26 +1,54 @@
-.carousel {
-  width: 600px;
-  height: 380px;
-  margin: auto;
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-.carousel-control-prev {
-  height: 300px;
+.header {
+  color: #4A0A1A;
+  background-color: #f9c586;
+  text-align: center;
+  padding: 1rem 0;
 }
+
+.main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  background-color: #fadfbe;
+}
+
+.carousel-container {
+  width: 100%;
+  
+}
+
+.carousel-control-prev,
 .carousel-control-next {
   height: 300px;
 }
 
-.carousel .carousel-control-prev-icon {
-  visibility: hidden;
-}
-.carousel:hover .carousel-control-prev-icon {
-  visibility: visible;
-}
-
+.carousel .carousel-control-prev-icon,
 .carousel .carousel-control-next-icon {
   visibility: hidden;
 }
+
+.carousel:hover .carousel-control-prev-icon,
 .carousel:hover .carousel-control-next-icon {
   visibility: visible;
+}
+
+.footer {
+  color: #4A0A1A;
+  background-color: #f9c586;
+  text-align: center;
+  padding: 1rem 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.tab{
+  margin-left: 150px;
 }
