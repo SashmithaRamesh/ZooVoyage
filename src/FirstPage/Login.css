@@ -16,7 +16,7 @@
     width: 100%;
     width: 400px;
     height: 300px;
-    margin-left: 860px;
+    margin-left: 890px;
   }
   
   .login-form h2 {
@@ -41,8 +41,8 @@
   }
   
   .form-group input {
-    width: 70%;
-    max-width: 250px;
+    width: 100%;
+    max-width: 255px;
     border: 1px solid #FFC57C;
     border-radius: 15px;
     font-size: 16px;
