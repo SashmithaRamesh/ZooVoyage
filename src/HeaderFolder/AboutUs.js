@@ -12,7 +12,7 @@ const AboutUs = () => {
             Founded in 1920, our zoo has been a beacon of wildlife conservation
             and education for over a century. Our mission has always been to
             provide a sanctuary for endangered species while educating the
-            public about the importance of biodiversity.
+            public about the importance of biodiversity .
           </p>
         </section>
         <section className="achievements-section">
