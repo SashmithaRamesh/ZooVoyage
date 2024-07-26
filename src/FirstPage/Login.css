@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: url(LoginImage.png) no-repeat center center/cover;
+  background: url(Login.png) no-repeat center center/cover;
   overflow: hidden;
 }
 
@@ -16,6 +16,7 @@
     width: 100%;
     width: 400px;
     height: 300px;
+    margin-left: 860px;
   }
   
   .login-form h2 {
@@ -26,7 +27,7 @@
   }
 
   .login-form ::placeholder{
-    color: #4A0A1A;
+    color: #BD1E1B;
   }
   
   .form-group {
@@ -40,10 +41,10 @@
   }
   
   .form-group input {
-    width: 50%;
-    max-width: 200px;
+    width: 70%;
+    max-width: 250px;
     border: 1px solid #FFC57C;
-    border-radius: 5px;
+    border-radius: 15px;
     font-size: 16px;
     margin-left: 10px;
   }
@@ -69,7 +70,7 @@
   }
   
   .register-link a {
-    color: #FFC57C;
+    color: #BD1E1B;
     text-decoration: none;
   }
   
@@ -78,5 +79,5 @@
   }
 
   .z{
-    color: white;
+    color: #4A0A1A;
   }
