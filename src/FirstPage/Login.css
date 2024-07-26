@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: url(Login.png) no-repeat center center/cover;
+  background: url('https://t3.ftcdn.net/jpg/05/91/89/04/240_F_591890431_AI2DqDVJZKrOM6bqChPExgVB1B38bpVx.jpg') no-repeat center center/cover;
   overflow: hidden;
 }
 
@@ -16,7 +16,7 @@
     width: 100%;
     width: 400px;
     height: 300px;
-    margin-left: 890px;
+    margin-left: 0px;
   }
   
   .login-form h2 {
@@ -52,8 +52,8 @@
   .login-button {
     width: 40%;
     padding: 10px;
-    background-color: #D72315;
-    color: #fff;
+    color: #D72315;
+    background-color: transparent;
     border: none;
     border-radius: 10px;
     font-size: 16px;
@@ -79,5 +79,5 @@
   }
 
   .z{
-    color: #4A0A1A;
+    color: white;
   }
