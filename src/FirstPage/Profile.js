@@ -28,7 +28,9 @@ const Profile = () => {
   };
 
   return (
-    <div className='prof'>
+    <div className='prof-container'>
+      <br></br>
+      <br/>
     <div className='profile-container'>
       <h2>Profile</h2>
       <div className='profile-form'>
