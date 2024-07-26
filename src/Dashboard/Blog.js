@@ -62,7 +62,7 @@ const sidebar = {
 const customTheme = createTheme({
   palette: {
     background: {
-      default: '#fadfbe', // Customize the default background color
+      default: '#FADFBE', // Customize the default background color
     },
   },
   typography: {
