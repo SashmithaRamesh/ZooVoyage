@@ -18,43 +18,38 @@ import Profile from './FirstPage/Profile';
 import Booking from './Bookings/Booking';
 import BookingForm from './ZooTicket/BookingForm';
 import Cart from './ZooTicket/Cart';
-
+import { CartProvider } from './ZooTicket/CartContext';
 
 function App() {
   return (
     <UserProvider>
-      <ChakraProvider theme={theme}>
-        <div className="App">
-          <BrowserRouter>
-            <Routes>
-              <Route path='/' element={<Blog />} />
-              <Route path='/login' element={<Login />} />
-              <Route path='/register' element={<Register />} />
-              <Route path='/about' element={<AboutUs />} />
-              <Route path='/adopt' element={<Adoptation />} />
-              <Route path='/report' element={<Report />} />
-              <Route path='/resort' element={<NearbyResort />} />
-              <Route path='/events' element={<ZooEvents />} />
-              <Route path='/donation' element={<ZooDonation />} />
-              <Route path='/location' element={<ZooLocation />} />
-              <Route path='/video' element={<VideoCarousel />} />
-              <Route path='/profile' element={<Profile />} />
-              <Route path='/booking' element={<Booking/>}/>
-              <Route path='/bookingform' element={<BookingForm/>}/>
-              <Route path='/cart' element={<Cart/>}/>
-
-              
-            </Routes>
-          </BrowserRouter>
-        </div>
-      </ChakraProvider>
+      <CartProvider>
+        <ChakraProvider theme={theme}>
+          <div className="App">
+            <BrowserRouter>
+              <Routes>
+                <Route path='/' element={<Blog />} />
+                <Route path='/login' element={<Login />} />
+                <Route path='/register' element={<Register />} />
+                <Route path='/about' element={<AboutUs />} />
+                <Route path='/adopt' element={<Adoptation />} />
+                <Route path='/report' element={<Report />} />
+                <Route path='/resort' element={<NearbyResort />} />
+                <Route path='/events' element={<ZooEvents />} />
+                <Route path='/donation' element={<ZooDonation />} />
+                <Route path='/location' element={<ZooLocation />} />
+                <Route path='/video' element={<VideoCarousel />} />
+                <Route path='/profile' element={<Profile />} />
+                <Route path='/booking' element={<Booking />} />
+                <Route path='/bookingform' element={<BookingForm />} />
+                <Route path='/cart' element={<Cart />} />
+              </Routes>
+            </BrowserRouter>
+          </div>
+        </ChakraProvider>
+      </CartProvider>
     </UserProvider>
   );
 }
 
 export default App;
-
-
-
-
-

@@ -11,9 +11,6 @@ import MainFeaturedPost from './MainFeaturedPost';
 import FeaturedPost from './FeaturedPost';
 import Sidebar from './Sidebar';
 import Footer from './Footer';
-import facebook from './assets/facebook.png';
-import instagram from './assets/instagram.png';
-import twitter from './assets/twitter.png';
 import './Blog.css';
 
 const sections = [

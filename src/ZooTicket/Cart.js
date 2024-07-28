@@ -1,10 +1,22 @@
 // CartPage.js
-import React from 'react';
+import React, { useContext } from 'react';
+import { CartContext } from './CartContext';
+import './Cart.css';
 
-function Cart({ cart = [], clearCart }) {
+function CartPage() {
+  const { cart, clearCart } = useContext(CartContext);
+
+  const calculateTotal = () => {
+    return cart.reduce((total, item) => {
+      const ticketsTotal = item.tickets.reduce((sum, ticket) => sum + ticket.price * ticket.quantity, 0);
+      const addOnsTotal = item.addOns.reduce((sum, addOn) => sum + addOn.price, 0);
+      return total + ticketsTotal + addOnsTotal;
+    }, 0);
+  };
+
   return (
     <div className="cart-page">
-      <h2>Cart</h2>
+      <h2>Your Cart</h2>
       {cart.length === 0 ? (
         <p>Your cart is empty.</p>
       ) : (
@@ -32,11 +44,14 @@ function Cart({ cart = [], clearCart }) {
               <p>Total: ₹{item.totalAmount}</p>
             </div>
           ))}
-          <button onClick={clearCart} className='bt'>Clear Cart</button>
+          <div className="cart-summary">
+            <p>Total Sum: ₹{calculateTotal()}</p>
+            <button className="clear-cart" onClick={clearCart}>Clear Cart</button>
+          </div>
         </div>
       )}
     </div>
   );
 }
 
-export default Cart;
+export default CartPage;

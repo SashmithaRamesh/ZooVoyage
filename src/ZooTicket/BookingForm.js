@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import './BookingForm.css';
-import { Link } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom'; // Changed useHistory to useNavigate
+import { CartContext } from './CartContext';
+
 const categories = [
   { name: 'Adult', price: 100 },
   { name: 'Child', price: 50 },
@@ -15,10 +17,12 @@ const addOns = [
   { name: 'Video Camera', price: 100 },
 ];
 
-function BookingForm({ addTicketToCart }) {
+function BookingForm() {
   const [selectedDate, setSelectedDate] = useState(null);
   const [tickets, setTickets] = useState(categories.map(category => ({ ...category, quantity: 0 })));
   const [selectedAddOns, setSelectedAddOns] = useState([]);
+  const { addTicketToCart } = useContext(CartContext);
+  const navigate = useNavigate(); // Changed from useHistory to useNavigate
 
   const today = new Date();
   const dates = Array.from({ length: 7 }, (_, i) => {
@@ -62,11 +66,12 @@ function BookingForm({ addTicketToCart }) {
     setTickets(categories.map(category => ({ ...category, quantity: 0 })));
     setSelectedAddOns([]);
     setSelectedDate(null);
+    navigate('/cart'); // Changed from history.push to navigate
   };
 
   return (
     <div className="booking-page">
-        <p>BOOK YOUR  TICKETS</p>
+      <p>Book Your Tickets</p>
       <div className="date-selector">
         {dates.map((date, index) => (
           <button
@@ -104,8 +109,7 @@ function BookingForm({ addTicketToCart }) {
             </div>
           ))}
         </div>
-        <Link to="/cart">
-        <button type="submit" className='add'>Add to Cart</button></Link>
+        <button type="submit" className='add'>Add to Cart</button>
       </form>
     </div>
   );
