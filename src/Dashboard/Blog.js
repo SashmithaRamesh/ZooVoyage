@@ -2,9 +2,6 @@ import * as React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import XIcon from '@mui/icons-material/X';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Header from './Header';
 import MainFeaturedPost from './MainFeaturedPost';
@@ -53,10 +50,9 @@ const featuredPosts = [
 ];
 
 const sidebar = {
+  title: 'Follow us',
+  description: 'Stay connected with us through our social media channels.',
   social: [
-    { name: 'GitHub', icon: GitHubIcon },
-    { name: 'X', icon: XIcon },
-    { name: 'Facebook', icon: FacebookIcon },
   ],
 };
 
