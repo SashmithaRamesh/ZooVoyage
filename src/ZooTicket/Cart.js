@@ -1,57 +1,42 @@
-// CartPage.js
 import React, { useContext } from 'react';
 import { CartContext } from './CartContext';
 import './Cart.css';
 
-function CartPage() {
+function Cart() {
   const { cart, clearCart } = useContext(CartContext);
 
-  const calculateTotal = () => {
-    return cart.reduce((total, item) => {
-      const ticketsTotal = item.tickets.reduce((sum, ticket) => sum + ticket.price * ticket.quantity, 0);
-      const addOnsTotal = item.addOns.reduce((sum, addOn) => sum + addOn.price, 0);
-      return total + ticketsTotal + addOnsTotal;
-    }, 0);
-  };
+  const totalAmount = cart.reduce((sum, item) => sum + item.totalAmount, 0);
 
   return (
     <div className="cart-page">
-      <h2>Your Cart</h2>
-      {cart.length === 0 ? (
-        <p>Your cart is empty.</p>
-      ) : (
-        <div>
-          {cart.map((item, index) => (
-            <div key={index} className="cart-item">
-              <h3>{item.date.toDateString()}</h3>
-              <ul>
-                {item.tickets.map(ticket => (
-                  <li key={ticket.name}>
-                    {ticket.name}: {ticket.quantity} x ₹{ticket.price} = ₹{ticket.quantity * ticket.price}
-                  </li>
-                ))}
-              </ul>
-              {item.addOns.length > 0 && (
-                <ul>
-                  <h4>Add Ons:</h4>
-                  {item.addOns.map(addOn => (
-                    <li key={addOn.name}>
-                      {addOn.name}: ₹{addOn.price}
-                    </li>
-                  ))}
-                </ul>
-              )}
-              <p>Total: ₹{item.totalAmount}</p>
-            </div>
-          ))}
-          <div className="cart-summary">
-            <p>Total Sum: ₹{calculateTotal()}</p>
-            <button className="clear-cart" onClick={clearCart}>Clear Cart</button>
+      <h1>Your Cart</h1>
+      {cart.map((item, index) => (
+        <div key={index} className="cart-item">
+          <h2>Booking for: {new Date(item.date).toDateString()}</h2> {/* Convert item.date to Date object */}
+          <div className="tickets">
+            {item.tickets.map((ticket, i) => (
+              <div key={i} className="ticket-detail">
+                <span>{ticket.name}: {ticket.quantity} x ₹{ticket.price}</span>
+              </div>
+            ))}
           </div>
+          <div className="add-ons">
+            <h3>Add-Ons:</h3>
+            {item.addOns.map((addOn, i) => (
+              <div key={i} className="add-on-detail">
+                <span>{addOn.name}: ₹{addOn.price}</span>
+              </div>
+            ))}
+          </div>
+          <h3>Total: ₹{item.totalAmount}</h3>
         </div>
-      )}
+      ))}
+      <div className="cart-total">
+        <h2>Grand Total: ₹{totalAmount}</h2>
+      </div>
+      <button onClick={clearCart} className="clear-cart">Clear Cart</button>
     </div>
   );
 }
 
-export default CartPage;
+export default Cart;

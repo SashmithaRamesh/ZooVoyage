@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import './BookingForm.css';
-import {  useNavigate } from 'react-router-dom'; // Changed useHistory to useNavigate
+import { useNavigate } from 'react-router-dom';
 import { CartContext } from './CartContext';
 
 const categories = [
@@ -18,23 +18,13 @@ const addOns = [
 ];
 
 function BookingForm() {
-  const [selectedDate, setSelectedDate] = useState(null);
+  const [selectedDate, setSelectedDate] = useState('');
   const [tickets, setTickets] = useState(categories.map(category => ({ ...category, quantity: 0 })));
   const [selectedAddOns, setSelectedAddOns] = useState([]);
   const { addTicketToCart } = useContext(CartContext);
-  const navigate = useNavigate(); // Changed from useHistory to useNavigate
+  const navigate = useNavigate();
 
-  const today = new Date();
-  const dates = Array.from({ length: 7 }, (_, i) => {
-    const date = new Date(today);
-    date.setDate(today.getDate() + i);
-    return date;
-  });
-
-  const formatDate = (date) => {
-    const options = { weekday: 'short', day: 'numeric', month: 'short' };
-    return date.toLocaleDateString(undefined, options);
-  };
+  const today = new Date().toISOString().split('T')[0]; // Today's date in 'YYYY-MM-DD' format
 
   const handleTicketChange = (index, delta) => {
     const newTickets = [...tickets];
@@ -51,6 +41,12 @@ function BookingForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const selectedDateObj = new Date(selectedDate);
+    const todayDateObj = new Date(today);
+    if (selectedDateObj < todayDateObj) {
+      alert("Please select a date that is today or in the future.");
+      return;
+    }
     if (!selectedDate) {
       alert("Please select a date.");
       return;
@@ -65,23 +61,20 @@ function BookingForm() {
     addTicketToCart(ticket);
     setTickets(categories.map(category => ({ ...category, quantity: 0 })));
     setSelectedAddOns([]);
-    setSelectedDate(null);
-    navigate('/cart'); // Changed from history.push to navigate
+    setSelectedDate('');
+    navigate('/cart');
   };
 
   return (
     <div className="booking-page">
       <p>Book Your Tickets</p>
       <div className="date-selector">
-        {dates.map((date, index) => (
-          <button
-            key={index}
-            className={selectedDate && date.toDateString() === selectedDate.toDateString() ? 'selected' : ''}
-            onClick={() => setSelectedDate(date)}
-          >
-            {formatDate(date)}
-          </button>
-        ))}
+        <input
+          type="date"
+          value={selectedDate}
+          min={today} // Ensures that past dates are not selectable
+          onChange={(e) => setSelectedDate(e.target.value)}
+        />
       </div>
       <form className="booking-form" onSubmit={handleSubmit}>
         {tickets.map((ticket, index) => (
