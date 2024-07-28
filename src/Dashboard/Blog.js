@@ -25,7 +25,7 @@ const mainFeaturedPost = {
   title: 'Welcome To Zoo Voyage!',
   description:
     "Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.",
-  image: '',
+  image: 'https://www.girnationalpark.in/uploads/gir-visit.png',
   imageText: 'main image description',
   linkText: 'Continue reading…',
 };
@@ -62,7 +62,7 @@ const sidebar = {
 const customTheme = createTheme({
   palette: {
     background: {
-      default: '#FADFBE', // Customize the default background color
+      default: '#f6e2cb', // Customize the default background color
     },
   },
   typography: {
