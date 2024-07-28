@@ -10,23 +10,22 @@ function Sidebar(props) {
   const {description, social, title } = props;
 
   return (
-    <Grid item xs={12} md={3}>
-      <Paper elevation={0} sx={{ p: 2, bgcolor: 'grey.200' }}>
+    <Grid item xs={1} md={13} >
+      <Paper elevation={9} sx={{ p: { xs: 3, md: 6 }, bgcolor: 'grey.200' }}>
+        <Typography variant="h6" gutterBottom >
+          Social
+        </Typography>
         <Typography variant="h6" gutterBottom>
           {title}
         </Typography>
-        <Typography>{description}</Typography>
-      </Paper>
-      <Typography variant="h6" gutterBottom sx={{ mt: 3 }}>
-        Social
-      </Typography>
+        <Typography>{description}
       {social.map((network) => (
         <Link
-          display="block"
-          variant="body1"
-          href="#"
-          key={network.name}
-          sx={{ mb: 0.5 }}
+        display="block"
+        variant="body1"
+        href="#"
+        key={network.name}
+        sx={{ mb: 0.1 }}
         >
           <Stack direction="row" spacing={1} alignItems="center">
             <network.icon />
@@ -34,6 +33,8 @@ function Sidebar(props) {
           </Stack>
         </Link>
       ))}
+      </Typography>
+      </Paper>
     </Grid>
   );
 }

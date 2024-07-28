@@ -89,7 +89,7 @@ export default function Blog() {
               <FeaturedPost key={post.title} post={post} />
             ))}
           </Grid>
-          <Grid container spacing={5} sx={{ mt: 3 }}>
+          <Grid container spacing={4.7} sx={{ mt: 0 }}>
             <Sidebar
               title={sidebar.title}
               description={sidebar.description}
@@ -98,20 +98,9 @@ export default function Blog() {
           </Grid>
         </main>
       </Container>
-
+      <br></br>
+      <br></br>
       <Footer>
-      <div className="media">
-        <h5 className="Z">FOLLOW US</h5>
-        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-          <img src={facebook} alt="Facebook" />
-        </a>
-        <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-          <img src={twitter} alt="Twitter" />
-        </a>
-        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-          <img src={instagram} alt="Instagram" />
-        </a>
-      </div>
       </Footer>
     </ThemeProvider>
   );
