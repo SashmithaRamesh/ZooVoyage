@@ -1,60 +1,40 @@
+// CartPage.js
 import React from 'react';
-import './Cart.css';
 
-function Cart({ cart, clearCart }) {
-  const getTotalTickets = () => {
-    return cart.reduce((total, item) => {
-      return (
-        total +
-        item.tickets.adult +
-        item.tickets.child +
-        item.tickets.senior +
-        item.tickets.infant +
-        item.tickets.disabled
-      );
-    }, 0);
-  };
-
-  const getTotalAmount = () => {
-    const prices = {
-      adult: 20,
-      child: 10,
-      senior: 15,
-      infant: 0,
-      disabled: 10,
-    };
-
-    return cart.reduce((total, item) => {
-      return (
-        total +
-        item.tickets.adult * prices.adult +
-        item.tickets.child * prices.child +
-        item.tickets.senior * prices.senior +
-        item.tickets.infant * prices.infant +
-        item.tickets.disabled * prices.disabled
-      );
-    }, 0);
-  };
-
+function Cart({ cart = [], clearCart }) {
   return (
-    <div className="cart">
+    <div className="cart-page">
       <h2>Cart</h2>
-      <ul>
-        {cart.map((item, index) => (
-          <li key={index}>
-            <div>Date: {item.date}</div>
-            <div>Adult: {item.tickets.adult}</div>
-            <div>Child: {item.tickets.child}</div>
-            <div>Senior Citizen: {item.tickets.senior}</div>
-            <div>Infant: {item.tickets.infant}</div>
-            <div>Disabled: {item.tickets.disabled}</div>
-          </li>
-        ))}
-      </ul>
-      <div>Total Tickets: {getTotalTickets()}</div>
-      <div>Total Amount: ${getTotalAmount()}</div>
-      <button onClick={clearCart}>Clear Cart</button>
-      <button>Proceed to Payment</button>
+      {cart.length === 0 ? (
+        <p>Your cart is empty.</p>
+      ) : (
+        <div>
+          {cart.map((item, index) => (
+            <div key={index} className="cart-item">
+              <h3>{item.date.toDateString()}</h3>
+              <ul>
+                {item.tickets.map(ticket => (
+                  <li key={ticket.name}>
+                    {ticket.name}: {ticket.quantity} x ₹{ticket.price} = ₹{ticket.quantity * ticket.price}
+                  </li>
+                ))}
+              </ul>
+              {item.addOns.length > 0 && (
+                <ul>
+                  <h4>Add Ons:</h4>
+                  {item.addOns.map(addOn => (
+                    <li key={addOn.name}>
+                      {addOn.name}: ₹{addOn.price}
+                    </li>
+                  ))}
+                </ul>
+              )}
+              <p>Total: ₹{item.totalAmount}</p>
+            </div>
+          ))}
+          <button onClick={clearCart}>Clear Cart</button>
+        </div>
+      )}
     </div>
   );
 }

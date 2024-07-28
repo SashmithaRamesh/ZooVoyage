@@ -7,7 +7,7 @@ const Booking = () => {
     <div className="home-page">
       <p className='choose'>CHOOSE TICKETS</p>
       <div className="ticket-options">
-        <Link to="/zoo" className="ticket-option zoo">
+        <Link to="/bookingform" className="ticket-option zoo">
           <span>Zoo</span>
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLhJRwBeEhmczrvknKgt3afLz56QRt39t4DA&s" alt="Zoo" />
         </Link>

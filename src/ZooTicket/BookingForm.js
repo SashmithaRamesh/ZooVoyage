@@ -1,97 +1,113 @@
 import React, { useState } from 'react';
 import './BookingForm.css';
+import { Link } from 'react-router-dom';
+const categories = [
+  { name: 'Adult', price: 100 },
+  { name: 'Child', price: 50 },
+  { name: 'Senior Citizen', price: 60 },
+  { name: 'Infant', price: 0 },
+  { name: 'Specially Abled', price: 0 },
+];
+
+const addOns = [
+  { name: 'Butterfly Park', price: 30 },
+  { name: 'Still Camera', price: 50 },
+  { name: 'Video Camera', price: 100 },
+];
 
 function BookingForm({ addTicketToCart }) {
-  const [date, setDate] = useState('');
-  const [tickets, setTickets] = useState({
-    adult: 0,
-    child: 0,
-    senior: 0,
-    infant: 0,
-    disabled: 0,
+  const [selectedDate, setSelectedDate] = useState(null);
+  const [tickets, setTickets] = useState(categories.map(category => ({ ...category, quantity: 0 })));
+  const [selectedAddOns, setSelectedAddOns] = useState([]);
+
+  const today = new Date();
+  const dates = Array.from({ length: 7 }, (_, i) => {
+    const date = new Date(today);
+    date.setDate(today.getDate() + i);
+    return date;
   });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setTickets({ ...tickets, [name]: Number(value) });
+  const formatDate = (date) => {
+    const options = { weekday: 'short', day: 'numeric', month: 'short' };
+    return date.toLocaleDateString(undefined, options);
+  };
+
+  const handleTicketChange = (index, delta) => {
+    const newTickets = [...tickets];
+    newTickets[index].quantity = Math.max(0, newTickets[index].quantity + delta);
+    setTickets(newTickets);
+  };
+
+  const handleAddOnChange = (addOn) => {
+    const newSelectedAddOns = selectedAddOns.includes(addOn)
+      ? selectedAddOns.filter(a => a !== addOn)
+      : [...selectedAddOns, addOn];
+    setSelectedAddOns(newSelectedAddOns);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addTicketToCart({ date, tickets });
-    setDate('');
-    setTickets({
-      adult: 0,
-      child: 0,
-      senior: 0,
-      infant: 0,
-      disabled: 0,
-    });
+    if (!selectedDate) {
+      alert("Please select a date.");
+      return;
+    }
+    const ticket = {
+      date: selectedDate,
+      tickets,
+      addOns: selectedAddOns,
+      totalAmount: tickets.reduce((sum, ticket) => sum + ticket.price * ticket.quantity, 0) +
+                   selectedAddOns.reduce((sum, addOn) => sum + addOn.price, 0),
+    };
+    addTicketToCart(ticket);
+    setTickets(categories.map(category => ({ ...category, quantity: 0 })));
+    setSelectedAddOns([]);
+    setSelectedDate(null);
   };
 
   return (
-    <form className="booking-form" onSubmit={handleSubmit}>
-      <div>
-        <label>Date</label>
-        <input
-          type="date"
-          value={date}
-          onChange={(e) => setDate(e.target.value)}
-          required
-        />
+    <div className="booking-page">
+        <p>ZOO TICKETS</p>
+      <div className="date-selector">
+        {dates.map((date, index) => (
+          <button
+            key={index}
+            className={selectedDate && date.toDateString() === selectedDate.toDateString() ? 'selected' : ''}
+            onClick={() => setSelectedDate(date)}
+          >
+            {formatDate(date)}
+          </button>
+        ))}
       </div>
-      <div>
-        <label>Adult</label>
-        <input
-          type="number"
-          name="adult"
-          value={tickets.adult}
-          onChange={handleChange}
-          min="0"
-        />
-      </div>
-      <div>
-        <label>Child</label>
-        <input
-          type="number"
-          name="child"
-          value={tickets.child}
-          onChange={handleChange}
-          min="0"
-        />
-      </div>
-      <div>
-        <label>Senior Citizen</label>
-        <input
-          type="number"
-          name="senior"
-          value={tickets.senior}
-          onChange={handleChange}
-          min="0"
-        />
-      </div>
-      <div>
-        <label>Infant</label>
-        <input
-          type="number"
-          name="infant"
-          value={tickets.infant}
-          onChange={handleChange}
-          min="0"
-        />
-      </div>
-      <div>
-        <label>Disabled</label>
-        <input
-          type="number"
-          name="disabled"
-          value={tickets.disabled}
-          onChange={handleChange}
-          min="0"
-        />
-      </div>
-      <button type="submit">Add to Cart</button>
-    </form>
+      <form className="booking-form" onSubmit={handleSubmit}>
+        {tickets.map((ticket, index) => (
+          <div key={ticket.name} className="ticket-category">
+            <span>{ticket.name}</span>
+            <span>{`₹${ticket.price}/ Person`}</span>
+            <div className="quantity-control">
+              <button type="button" onClick={() => handleTicketChange(index, -1)}>-</button>
+              <span>{ticket.quantity}</span>
+              <button type="button" onClick={() => handleTicketChange(index, 1)}>+</button>
+            </div>
+          </div>
+        ))}
+        <div className="add-ons">
+          <h3>Add Ons</h3>
+          {addOns.map(addOn => (
+            <div key={addOn.name} className="add-on">
+              <input
+                type="checkbox"
+                id={addOn.name}
+                checked={selectedAddOns.includes(addOn)}
+                onChange={() => handleAddOnChange(addOn)}
+              />
+              <label htmlFor={addOn.name}>{addOn.name}</label>
+            </div>
+          ))}
+        </div>
+        <Link to="/cart">
+        <button type="submit">Add to Cart</button></Link>
+      </form>
+    </div>
   );
 }
 

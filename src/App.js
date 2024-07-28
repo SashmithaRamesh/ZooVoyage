@@ -16,6 +16,9 @@ import VideoCarousel from './components/VideoCarousel';
 import { UserProvider } from './FirstPage/UserContext';
 import Profile from './FirstPage/Profile';
 import Booking from './Bookings/Booking';
+import BookingForm from './ZooTicket/BookingForm';
+import Cart from './ZooTicket/Cart';
+
 
 function App() {
   return (
@@ -37,6 +40,9 @@ function App() {
               <Route path='/video' element={<VideoCarousel />} />
               <Route path='/profile' element={<Profile />} />
               <Route path='/booking' element={<Booking/>}/>
+              <Route path='/bookingform' element={<BookingForm/>}/>
+              <Route path='/cart' element={<Cart/>}/>
+
               
             </Routes>
           </BrowserRouter>
@@ -47,3 +53,8 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
