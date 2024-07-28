@@ -34,13 +34,13 @@
   .ticket-options {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 50px;
     flex-wrap: wrap; /* Allow wrapping to new rows */
     width: 100%; /* Adjust width to accommodate row alignment */
   }
   
   .ticket-option {
-    background: linear-gradient(to right, #fca78e, #5af7dc);
+    background: #f9d5dc;
     color: white;
     padding: 20px;
     border-radius: 10px;
@@ -57,6 +57,7 @@
   
   .ticket-option:hover {
     transform: scale(1.05);
+    background: #fba9ba;
   }
   
   .ticket-option img {
@@ -69,5 +70,8 @@
   span {
     text-shadow: #daec55; 
     font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    color: black;
+    padding: 20px;
   }
   
