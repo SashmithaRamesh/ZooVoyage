@@ -66,7 +66,7 @@ function BookingForm({ addTicketToCart }) {
 
   return (
     <div className="booking-page">
-        <p>ZOO TICKETS</p>
+        <p>BOOK YOUR  TICKETS</p>
       <div className="date-selector">
         {dates.map((date, index) => (
           <button
