@@ -6,7 +6,7 @@ import anivid2 from './videos/anivid2.mp4';
 import anivid3 from './videos/anivid3.mp4';
 import anivid4 from './videos/anivid4.mp4';
 import img1 from './images/img1.jpeg';
-import img2 from './images/img2.jpeg';
+import img2 from './images/img2.jpg';
 import img3 from './images/img3.jpeg';
 import img4 from './images/img4.jpg';
 import birdvid1 from './videos/birdvid1.mp4';
@@ -79,29 +79,32 @@ const VideoCarousel = () => {
   ];
 
   return (
-    <div className="app-container">
-      <header className="header">
-        <h2>ZOO VOYAGE</h2>
+    <div className="ac">
+      <header className="hed">
+        <br></br>
+        <h4>ZOO VOYAGE - EVENTS</h4>
+        <br></br>
       </header>
-      <main className="main">
-        <div className="carousel-container">
+      <main className="ma">
+        <div className="carousel-con">
           <table className="tabheading">
               <tr>
-                <td>ANIMALS</td>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <td><b>ANIMALS</b></td>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <td>WILDLIFE SANCTUARIES</td>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <td><b>WILDLIFE SANCTUARIES</b></td>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <td>BIRDS</td>
+                <td><b>BIRDS</b></td>
               </tr>
           </table>
+
+          <br></br>
+
           <table className="tab">
               <tr>
                 <td>
@@ -115,7 +118,7 @@ const VideoCarousel = () => {
                           controls={true}
                           playing={true}
                           width="400px"
-                          height="300px"
+                          height="200px"
                           />
                       </Carousel.Item>
                     );
@@ -133,6 +136,7 @@ const VideoCarousel = () => {
                         <img
                           src={ImgObj.src}
                           alt={ImgObj.title}
+                          pip={true}
                           width="400px"
                           height="300px"
                         />
@@ -155,7 +159,7 @@ const VideoCarousel = () => {
                           controls={true}
                           playing={true}
                           width="400px"
-                          height="300px"
+                          height="200px"
                           />
                       </Carousel.Item>
                     );
@@ -163,6 +167,26 @@ const VideoCarousel = () => {
                 </Carousel>
                 </td>
               </tr>
+          </table>
+
+          <br></br>
+
+          <table className="q">
+            <tr>
+              <td className="but"><button>View More</button></td>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <td className="but"><button>View More</button></td>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <td className="but"><button>View More</button></td>
+            </tr>
           </table>
         </div>
       </main>

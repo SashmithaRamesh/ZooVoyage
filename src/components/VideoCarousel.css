@@ -1,27 +1,26 @@
-.app-container {
+.ac {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-.header {
+.hed {
   color: #4A0A1A;
-  background-color: #f9c586;
+  background-color: #fbc4ab;
   text-align: center;
-  padding: 1rem 0;
 }
 
-.main {
+.ma {
   flex: 1;
   display: flex;
   align-items: center;
   padding: 2rem;
-  background-color: #fadfbe;
+  background-color: #f6e2cb;
 }
 
-.carousel-container {
+.carousel-con {
+  margin-bottom: 30px;
   width: 100%;
-  
 }
 
 .carousel-control-prev,
@@ -41,18 +40,39 @@
 
 .footer {
   color: #4A0A1A;
-  background-color: #f9c586;
+  background-color: #fbc4ab;
   text-align: center;
-  padding: 1rem 0;
+  padding: 0.9rem 0;
   position: relative;
   bottom: 0;
   width: 100%;
 }
 
 .tab{
-  margin-left: 150px;
+  margin-left: 6px;
 }
 
 .tabheading{
-  margin-left: 300px;
+  margin-left: 160px;
+  color: #a53860;
+  font-size: 1.15em;
+}
+
+.q{
+  margin-left: 138px;
+}
+
+.but{
+  width: 115px;
+  height: 33px;
+  background-color: #a53860;
+  color: white;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.but:hover{
+  background-color: #ce4257;
+  border-color: #DA627D;
 }
