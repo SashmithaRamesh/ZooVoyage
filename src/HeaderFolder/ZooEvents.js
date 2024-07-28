@@ -15,7 +15,7 @@ const events = [
     videoUrl: 'https://www.youtube.com/embed/weDPR50YHVM?si=JcM2Pbnxsbu_EnQD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin'
   },
   {
-    title: 'Birds of Prey Show',
+    title: 'Birds of Prey Show ',
     description: 'Experience the thrilling flight of our birds of prey.',
     imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCoDfG0oJH_Nm52xcophz6C0-86rR3a5dTdg&s', // Replace with a Google image link
     videoUrl: 'https://www.youtube.com/embed/fnkV3S3aOio?si=SsYVQtrmik5pG9za" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin'
