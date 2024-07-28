@@ -11,6 +11,9 @@ import MainFeaturedPost from './MainFeaturedPost';
 import FeaturedPost from './FeaturedPost';
 import Sidebar from './Sidebar';
 import Footer from './Footer';
+import facebook from './assets/facebook.png';
+import instagram from './assets/instagram.png';
+import twitter from './assets/twitter.png';
 
 const sections = [
   { title: 'ABOUT US', url: '/about'},
@@ -95,10 +98,20 @@ export default function Blog() {
         </main>
       </Container>
 
-      <Footer
-        title="Footer"
-        description="Something here to give the footer a purpose!"
-      />
+      <Footer>
+      <div className="social-media">
+        <h5 className="Z">FOLLOW US</h5>
+        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+          <img src={facebook} alt="Facebook" />
+        </a>
+        <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+          <img src={twitter} alt="Twitter" />
+        </a>
+        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+          <img src={instagram} alt="Instagram" />
+        </a>
+      </div>
+      </Footer>
     </ThemeProvider>
   );
 }

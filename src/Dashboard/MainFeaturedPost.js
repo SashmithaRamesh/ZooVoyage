@@ -51,12 +51,13 @@ function MainFeaturedPost(props) {
               {post.description}
             </Typography>
             <Link to="/about"> 
-              <Button size="medium"
+              <Button size="medium" variant='outlined'
               sx={{
-              backgroundColor: '#450920',
+              borderColor: '#450920',
               color: 'white',
               '&:hover': {
                 backgroundColor: '#a53860',
+                borderColor: '#a53860'
               },
               }}>{post.linkText}</Button>
             </Link>
@@ -67,12 +68,13 @@ function MainFeaturedPost(props) {
             <br></br><br></br><br></br><br></br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <Link to="/booking">
-              <Button size="medium"
+              <Button size="medium" variant='outlined'
               sx={{
-              backgroundColor: '#450920',
+              borderColor: '#450920',
               color: 'white',
               '&:hover': {
                 backgroundColor: '#a53860',
+                borderColor: '#a53860'
               },
               }}>
                 Buy Tickets
@@ -80,12 +82,13 @@ function MainFeaturedPost(props) {
             </Link>
             <br></br><br></br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <Button size="medium"
+            <Button size="medium" variant='outlined'
             sx={{
-              backgroundColor: '#450920',
+              borderColor: '#450920',
               color: 'white',
               '&:hover': {
                 backgroundColor: '#a53860',
+                borderColor: '#a53860'
               },
             }}>
               Track Transactional Status

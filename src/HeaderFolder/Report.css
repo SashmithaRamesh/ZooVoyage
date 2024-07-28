@@ -1,16 +1,18 @@
-
-
 .contact-container {
-    max-width: 600px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
+    background-color: #F9DBBD;
   }
-  
-  h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #24070e;
+
+  .head{
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    max-width: 700px;
+    margin-left:315px;
+    background-color: #FFA5AB;
   }
   
   .contact-form {
@@ -53,10 +55,10 @@
   }
   
   .contact-button {
-    width: 40%;
+    width: 30%;
     padding: 10px;
     color: white;
-    background-color: #450920;
+    background-color: #a53860;
     border: none;
     border-radius: 10px;
     font-size: 16px;
@@ -65,11 +67,17 @@
   }
   
   .contact-button:hover {
-    background-color: #a53860;
+    background-color: #ea8097;
   }
   
   .contact-info {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
     margin-bottom: 30px;
+    background-color: #ea8097;
+    margin-left:315px;
   }
   
   .contact-info h2 {
@@ -85,9 +93,7 @@
   }
   
   .social-media {
-    display: flex;
     justify-content: center;
-    gap: 20px;
   }
   
   .social-media h2 {
@@ -96,12 +102,34 @@
     margin-bottom: 10px;
   }
   
-  .social-media img {
-    width: 40px;
-    height: 40px;
+  .facebook img{
+    width: 90px;
+    height: 58px;
+  }
+  
+  .twitter img{
+    width: 105px;
+    height: 50px;
+  }
+  
+  .instagram img{
+    width: 80px;
+    height: 50px;
   }
   
   .Z {
     color: #4A0A1A;
   }
-  
+
+  .m{
+    padding-left: 180px;
+  }
+
+  .f{
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #FFA5AB;
+    margin-left:315px;
+  }
