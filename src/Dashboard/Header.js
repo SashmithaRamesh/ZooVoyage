@@ -15,14 +15,12 @@ function Header(props) {
       <Toolbar sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Link to="/profile" style={{ textDecoration: 'none', color: '#4A0A1A' }}>
           <Button
-            variant="outlined"
             size="small"
             sx={{
-              borderColor: '#4A0A1A',
-              color: '#BF1D1A',
+              backgroundColor: '#450920',
+              color: 'white',
               '&:hover': {
-                borderColor: '#F77D00',
-                backgroundColor: 'rgba(215, 35, 21, 0.04)',
+                backgroundColor: '#a53860',
               },
             }}
           >
@@ -44,14 +42,12 @@ function Header(props) {
         </IconButton>
         <Link to='/login' style={{ textDecoration: 'none' }}>
           <Button
-            variant="outlined"
             size="small"
             sx={{
-              borderColor: '#4A0A1A',
-              color: '#BF1D1A',
+              backgroundColor: '#450920',
+              color: 'white',
               '&:hover': {
-                borderColor: '#F77D00',
-                backgroundColor: 'rgba(215, 35, 21, 0.04)',
+              backgroundColor: '#a53860',
               },
             }}
           >
@@ -61,14 +57,12 @@ function Header(props) {
         &nbsp;&nbsp;
         <Link to='/register' style={{ textDecoration: 'none' }}>
           <Button
-            variant="outlined"
             size="small"
             sx={{
-              borderColor: '#4A0A1A',
-              color: '#BF1D1A',
+              backgroundColor: '#450920',
+              color: 'white',
               '&:hover': {
-                borderColor: '#F77D00',
-                backgroundColor: 'rgba(215, 35, 21, 0.04)',
+              backgroundColor: '#a53860',
               },
             }}
           >

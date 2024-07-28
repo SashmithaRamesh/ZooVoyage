@@ -52,7 +52,7 @@
     width: 40%;
     padding: 10px;
     color: white;
-    background-color: transparent;
+    background-color: #450920;
     border: none;
     border-radius: 10px;
     font-size: 16px;
@@ -60,7 +60,7 @@
   }
   
   .login-button:hover {
-    background-color: #BD1E1B;
+    background-color: #a53860;
   }
   
   .register-link {
