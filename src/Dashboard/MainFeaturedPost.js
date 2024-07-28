@@ -51,13 +51,13 @@ function MainFeaturedPost(props) {
               {post.description}
             </Typography>
             <Link to="/about"> 
-              <Button size="medium" variant='outlined'
-              sx={{
-              borderColor: '#450920',
+            <Button size="medium"
+            sx={{
+              backgroundColor: '#a53860',
               color: 'white',
               '&:hover': {
-                backgroundColor: '#a53860',
-                borderColor: '#a53860'
+                backgroundColor: '#ce4257',
+                borderColor: '#DA627D'
               },
               }}>{post.linkText}</Button>
             </Link>
@@ -68,13 +68,13 @@ function MainFeaturedPost(props) {
             <br></br><br></br><br></br><br></br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <Link to="/booking">
-              <Button size="medium" variant='outlined'
-              sx={{
-              borderColor: '#450920',
+            <Button size="medium"
+            sx={{
+              backgroundColor: '#a53860',
               color: 'white',
               '&:hover': {
-                backgroundColor: '#a53860',
-                borderColor: '#a53860'
+                backgroundColor: '#ce4257',
+                borderColor: '#DA627D'
               },
               }}>
                 Buy Tickets
@@ -82,13 +82,13 @@ function MainFeaturedPost(props) {
             </Link>
             <br></br><br></br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <Button size="medium" variant='outlined'
+            <Button size="medium"
             sx={{
-              borderColor: '#450920',
+              backgroundColor: '#a53860',
               color: 'white',
               '&:hover': {
-                backgroundColor: '#a53860',
-                borderColor: '#a53860'
+                backgroundColor: '#ce4257',
+                borderColor: '#DA627D'
               },
             }}>
               Track Transactional Status

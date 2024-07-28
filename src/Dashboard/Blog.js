@@ -14,6 +14,7 @@ import Footer from './Footer';
 import facebook from './assets/facebook.png';
 import instagram from './assets/instagram.png';
 import twitter from './assets/twitter.png';
+import './Blog.css';
 
 const sections = [
   { title: 'ABOUT US', url: '/about'},
@@ -99,7 +100,7 @@ export default function Blog() {
       </Container>
 
       <Footer>
-      <div className="social-media">
+      <div className="media">
         <h5 className="Z">FOLLOW US</h5>
         <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
           <img src={facebook} alt="Facebook" />
