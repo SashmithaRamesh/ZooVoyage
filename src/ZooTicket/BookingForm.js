@@ -105,7 +105,7 @@ function BookingForm({ addTicketToCart }) {
           ))}
         </div>
         <Link to="/cart">
-        <button type="submit">Add to Cart</button></Link>
+        <button type="submit" className='add'>Add to Cart</button></Link>
       </form>
     </div>
   );
