@@ -1,49 +1,39 @@
-.booking-page {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background-color: #f9f9f9;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+body {
     font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+  }
+  
+  .booking-page {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
   }
   
   .booking-page p {
-    font-size: 2rem;
-    color: #333;
+    font-size: 24px;
+    font-weight: bold;
     text-align: center;
     margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
   }
   
   .date-selector {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin-bottom: 20px;
-    flex-wrap: wrap;
   }
   
-  .date-selector button {
-    padding: 10px 15px;
-    margin: 5px;
-    border: 1px solid #ccc;
-    background-color: white;
-    cursor: pointer;
+  .date-selector input[type="date"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
     border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-  .date-selector button.selected {
-    background-color: #007bff;
-    color: white;
-    border: none;
-  }
-  
-  .date-selector button:hover {
-    background-color: #0056b3;
-    color: white;
+    cursor: pointer;
   }
   
   .booking-form {
@@ -51,21 +41,16 @@
     flex-direction: column;
   }
   
-  .ticket-category {
+  .ticket-category, .add-ons {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    margin-bottom: 15px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #ddd;
   }
   
-  .ticket-category span {
-    font-size: 1.1rem;
-    color: #333;
+  .ticket-category:last-child, .add-ons:last-child {
+    border-bottom: none;
   }
   
   .quantity-control {
@@ -75,37 +60,19 @@
   
   .quantity-control button {
     padding: 5px 10px;
-    margin: 0 5px;
-    border: 1px solid #ccc;
-    background-color: white;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f4f4f4;
     cursor: pointer;
-    border-radius: 3px;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-  .quantity-control button:hover {
-    background-color: #007bff;
-    color: white;
-    border: none;
   }
   
   .quantity-control span {
-    font-size: 1.1rem;
     margin: 0 10px;
-  }
-  
-  .add-ons {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
   }
   
   .add-ons h3 {
-    font-size: 1.5rem;
-    color: #333;
     margin-bottom: 10px;
   }
   
@@ -115,30 +82,24 @@
     margin-bottom: 10px;
   }
   
-  .add-on input[type="checkbox"] {
-    margin-right: 10px;
-  }
-  
   .add-on label {
-    font-size: 1.1rem;
-    color: #555;
+    margin-left: 5px;
+    font-size: 16px;
   }
   
-  button[type="submit"].add {
+  .add {
     padding: 10px 20px;
-    margin: 20px auto;
-    display: block;
-    font-size: 1.2rem;
-    color: white;
+    font-size: 18px;
+    color: #fff;
     background-color: #007bff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    align-self: center;
   }
   
-  button[type="submit"].add:hover {
+  .add:hover {
     background-color: #0056b3;
   }
   
