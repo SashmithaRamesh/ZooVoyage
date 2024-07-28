@@ -32,7 +32,7 @@ function Cart({ cart = [], clearCart }) {
               <p>Total: ₹{item.totalAmount}</p>
             </div>
           ))}
-          <button onClick={clearCart}>Clear Cart</button>
+          <button onClick={clearCart} className='bt'>Clear Cart</button>
         </div>
       )}
     </div>
