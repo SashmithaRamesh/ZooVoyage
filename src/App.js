@@ -16,6 +16,7 @@ import VideoCarousel from './components/VideoCarousel';
 import { UserProvider } from './FirstPage/UserContext';
 import Profile from './FirstPage/Profile';
 import Signup from './Signup';
+import Booking from './Bookings/Booking';
 
 function App() {
   return (
@@ -37,6 +38,8 @@ function App() {
               <Route path='/video' element={<VideoCarousel />} />
               <Route path='/profile' element={<Profile />} />
               <Route path='/up' element={<Signup/>}/>
+              <Route path='/booking' element={<Booking/>}/>
+              
             </Routes>
           </BrowserRouter>
         </div>
