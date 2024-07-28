@@ -18,7 +18,7 @@ const sections = [
   { title: 'ANIMAL AND BIRDS', url: '/video' },
   { title: 'ZOO EVENTS', url: '/events' },
   { title: 'ANIMAL ADOPTATION', url: '/adopt' },
-  { title: 'CONTACT', url: '/contact' },
+  { title: 'REPORT', url: '/report' },
 ];
 
 const mainFeaturedPost = {

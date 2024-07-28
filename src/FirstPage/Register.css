@@ -32,7 +32,7 @@
   .form-group label {
     display: block;
     margin-bottom: 5px;
-    background-color: #FFC57C;
+    background-color: #4A0A1A;
   }
   
   .form-group input {
@@ -41,7 +41,7 @@
     border-radius: 15px;
     font-size: 16px;
     max-width: 260px;
-    border: 1px solid #FFC57C;
+    border: 1px solid #4A0A1A;
   }
   
   .register-button {

@@ -41,7 +41,7 @@
   .contact-form textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #FFC57C;
+    border: 1px solid #4A0A1A;
     border-radius: 5px;
     font-size: 1em;
     color: #4A0A1A;
@@ -49,23 +49,23 @@
   
   .contact-form input::placeholder,
   .contact-form textarea::placeholder {
-    color: #050101;
+    color: #a53860;
   }
   
   .contact-button {
-    width: 100px;
+    width: 40%;
     padding: 10px;
-    background-color: #D72315;
-    color: #fff;
+    color: white;
+    background-color: #450920;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     font-size: 16px;
     cursor: pointer;
     align-self: center;
   }
   
   .contact-button:hover {
-    background-color: #BD1E1B;
+    background-color: #a53860;
   }
   
   .contact-info {
@@ -101,7 +101,7 @@
     height: 40px;
   }
   
-  .z {
+  .Z {
     color: #4A0A1A;
   }
   

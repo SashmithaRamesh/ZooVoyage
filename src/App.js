@@ -6,7 +6,7 @@ import Register from './FirstPage/Register';
 import Blog from './Dashboard/Blog';
 import AboutUs from './HeaderFolder/AboutUs';
 import Adoptation from './HeaderFolder/Adoptation';
-import Contact from './HeaderFolder/Contact';
+import Report from './HeaderFolder/Report';
 import NearbyResort from './HeaderFolder/NearbyResort';
 import ZooEvents from './HeaderFolder/ZooEvents';
 import ZooDonation from './Donation/ZooDonation';
@@ -30,7 +30,7 @@ function App() {
               <Route path='/register' element={<Register />} />
               <Route path='/about' element={<AboutUs />} />
               <Route path='/adopt' element={<Adoptation />} />
-              <Route path='/contact' element={<Contact />} />
+              <Route path='/report' element={<Report />} />
               <Route path='/resort' element={<NearbyResort />} />
               <Route path='/events' element={<ZooEvents />} />
               <Route path='/donation' element={<ZooDonation />} />

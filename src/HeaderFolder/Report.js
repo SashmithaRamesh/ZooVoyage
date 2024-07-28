@@ -1,37 +1,38 @@
 import React from 'react';
-import './Contact.css';
+import './Report.css';
 import facebookLogo from './assets/facebook-logo.png';
 import twitterLogo from './assets/twitter-logo.png';
 import instagramLogo from './assets/instagram-logo.png';
 
-const ContactUs = () => {
+const Report = () => {
   return (
   
     <div className="contact-container">
-      <h1 className="z">Contact Us</h1>
+      <h4 className="Z">REPORT</h4>
+      <br></br>
       <form className="contact-form">
         <div className="form-group">
-          Name:
-          <input type="text" name="name" placeholder="Your Name" required />
+          NAME:
+          <input type="text" name="name" placeholder="name" required />
         </div>
         <div className="form-group">
-          Email:
-          <input type="email" name="email" placeholder="Your Email" required />
+          EMAIL:
+          <input type="email" name="email" placeholder="email" required />
         </div>
         <div className="form-group">
-          Message:
-          <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+          MESSAGE:
+          <textarea name="message" rows="4" placeholder="your message" required></textarea>
         </div>
-        <button type="submit" className="contact-button">Submit</button>
+        <button type="submit" className="contact-button">SUBMIT</button>
       </form>
       <div className="contact-info">
-        <h2 className="z">Contact Information</h2>
-        <p>Email: support@zootickets.com</p>
+        <h4 className="Z">CONTACT INFORMATION</h4>
+        <p>Email: support@zoovoyage.com</p>
         <p>Phone: +1 (555) 123-4567</p>
         <p>Address: 123 Zoo Lane, Animal City, World</p>
       </div>
       <div className="social-media">
-        <h2 className="z">Follow Us</h2>
+        <h5 className="Z">FOLLOW US</h5>
         <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
           <img src={facebookLogo} alt="Facebook" />
         </a>
@@ -47,4 +48,4 @@ const ContactUs = () => {
   );
 };
 
-export default ContactUs;
+export default Report;
