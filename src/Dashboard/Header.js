@@ -30,7 +30,7 @@ function Header(props) {
         <Typography
           component="h2"
           variant="h5"
-          color="#4A0A1A"
+          color="#450920"
           align="center"
           noWrap
           sx={{ flex: 1 }}
@@ -80,7 +80,7 @@ function Header(props) {
           <Link
             key={section.title}
             to={section.url}
-            style={{ color: '#4A0A1A', textDecoration: 'none', padding: '8px', flexShrink: 0 }}
+            style={{ color: '#450920', textDecoration: 'none', padding: '8px', flexShrink: 0 }}
             variant="body2"
           >
             {section.title}

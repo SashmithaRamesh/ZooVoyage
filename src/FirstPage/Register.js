@@ -110,11 +110,11 @@ const Register = () => {
             required
           />
         </div>
-        <button type="submit" className="register-button">
+        <h6><button type="submit" className="register-button">
           Register
-        </button>
+        </button></h6>
         <div className="login-link">
-          <p className='z'>Already have an account? <Link to="/login">Login here</Link></p>
+          <h6 className='z'><b>Already have an account? </b><Link to="/login">Login here</Link></h6>
         </div>
       </form>
     </div>

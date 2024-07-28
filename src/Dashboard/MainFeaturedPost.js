@@ -51,7 +51,14 @@ function MainFeaturedPost(props) {
               {post.description}
             </Typography>
             <Link to="/about"> 
-              <Button>{post.linkText}</Button>
+              <Button size="medium"
+              sx={{
+              backgroundColor: '#450920',
+              color: 'white',
+              '&:hover': {
+                backgroundColor: '#a53860',
+              },
+              }}>{post.linkText}</Button>
             </Link>
           </Box>
         </Grid>
@@ -60,13 +67,27 @@ function MainFeaturedPost(props) {
             <br></br><br></br><br></br><br></br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <Link to="/booking">
-              <Button variant="outlined" size="small">
+              <Button size="medium"
+              sx={{
+              backgroundColor: '#450920',
+              color: 'white',
+              '&:hover': {
+                backgroundColor: '#a53860',
+              },
+              }}>
                 Buy Tickets
               </Button>
             </Link>
             <br></br><br></br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <Button variant="outlined" size="small">
+            <Button size="medium"
+            sx={{
+              backgroundColor: '#450920',
+              color: 'white',
+              '&:hover': {
+                backgroundColor: '#a53860',
+              },
+            }}>
               Track Transactional Status
             </Button>
           </Box>
