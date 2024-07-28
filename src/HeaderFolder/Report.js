@@ -11,24 +11,25 @@ const Report = () => {
       <header className='head'>
         <h4 className="Z">REPORT</h4>
         <br />
-        <div className="form-group">
+        <div className="email-form-group">
           TO EMAIL:
           <input className='toemail' type="email" name="to email" placeholder="to email" required />
         </div>
+        <br></br>
         <form className="contact-form">
-          <div className="form-group">
-          &nbsp;&nbsp;NAME:
+          <div className="report-form-group">
+          NAME:
             <input type="text" name="name" placeholder="name" required />
           </div>
-          <div className="form-group">
-          &nbsp;&nbsp;EMAIL:
+          <div className="report-form-group">
+          EMAIL:
             <input type="email" name="email" placeholder="email" required />
           </div>
-          <div className="form-group">
-            &nbsp;&nbsp;ZOO NAME:
+          <div className="report-form-group">
+          ZOO NAME:
             <input type="text" name="zoo name" placeholder="name of the zoo" required />
           </div>
-          <div className="form-group">
+          <div className="report-form-group">
             MESSAGE:
             <textarea name="message" rows="4" placeholder="your message" required></textarea>
           </div>

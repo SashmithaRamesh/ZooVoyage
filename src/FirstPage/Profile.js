@@ -32,20 +32,20 @@ const Profile = () => {
       <br></br>
       <br/>
     <div className='profile-container'>
-      <h2>Profile</h2>
+      <h2>PROFILE</h2>
       <div className='profile-form'>
         <table className='profile-table'>
           <tbody>
             <tr>
-              <td><b>Username:</b></td>
+              <td><b className='col'>Username:</b></td>
               <td><input type="text" name="username" value={editedUser.username} onChange={handleInputChange} /></td>
             </tr>
             <tr>
-              <td><b>Email:</b></td>
+              <td><b className='col'>Email:</b></td>
               <td><input type="email" name="email" value={editedUser.email} onChange={handleInputChange} /></td>
             </tr>
             <tr>
-              <td><b>Mobile Number:</b></td>
+              <td><b className='col'>Mobile Number:</b></td>
               <td><input type="tel" name="contact" value={editedUser.contact} onChange={handleInputChange} /></td>
             </tr>
             {/* Add other fields as needed */}

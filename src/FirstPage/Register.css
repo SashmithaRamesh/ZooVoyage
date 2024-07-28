@@ -43,6 +43,11 @@
     max-width: 260px;
     border: 1px solid #4A0A1A;
   }
+
+  .form-group input:focus {
+    border-color: #a53860;
+    outline: none;
+  }
   
   .register-button {
     width: 40%;

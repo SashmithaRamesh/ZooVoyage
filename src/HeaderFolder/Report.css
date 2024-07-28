@@ -26,7 +26,7 @@
     background-color: #fff;
   }
   
-  .form-group {
+  .report-form-group {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -36,10 +36,19 @@
     font-size: 1.2em;
     margin-bottom: 8px;
     font-weight: bold;
-    color: #333; /* Default color for the labels */
+    color: #a53860; /* Default color for the labels */
   }
   
-  .contact-form input,
+  .email-form-group input,
+  .contact-form input{
+    width: 35%;
+    padding: 10px;
+    border: 1px solid #4A0A1A;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #4A0A1A;
+  }
+
   .contact-form textarea {
     width: 100%;
     padding: 10px;
@@ -52,6 +61,13 @@
   .contact-form input::placeholder,
   .contact-form textarea::placeholder {
     color: #a53860;
+  }
+
+  .email-form-group input:focus,
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: #a53860;
+    outline: none;
   }
   
   .contact-button {
@@ -134,7 +150,14 @@
     margin-left:315px;
   }
 
-  .toemail{
-    border: 1px solid #4A0A1A;
+  .toemail::placeholder{
     color: #a53860;
   }
+
+  .email-form-group{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  
