@@ -11,7 +11,7 @@ const events = [
   {
     title: 'Elephant Parade',
     description: 'Enjoy the majestic parade of elephants in the zoo.',
-    imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm0ArL6nRIQ0UCuEmG2pnBZUS9HmxNsRuOZA&s', // Replace with a Google image link
+    imageUrl: 'https://live.staticflickr.com/4111/5086255890_9dd19d4fff_b.jpg', // Replace with a Google image link
     videoUrl: 'https://www.youtube.com/embed/weDPR50YHVM?si=JcM2Pbnxsbu_EnQD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin'
   },
   {
@@ -25,7 +25,8 @@ const events = [
 const ZooEvents = () => {
   return (
     <div className="events-page">
-      <h2 className="page-title">RECENT EVENTS</h2>
+      <br></br>
+      <h4 className="page-title">RECENT EVENTS</h4>
       <div className="events-container">
         {events.map((event, index) => (
           <div key={index} className="event-card">
