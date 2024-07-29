@@ -1,11 +1,13 @@
-
+.about{
+  background-color: #f6e2cb;
+}
   
   .about-us-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
     padding: 20px;
+    max-height: 800px;
   }
   
   .about-us-content {
@@ -16,33 +18,71 @@
     width: 100%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   }
+
+  .ab{
+    text-align: center;
+    color: #4A0A1A;
+    font-size: 22px;
+    margin-top: 20px;
+  }
   
   .a{
     text-align: center;
-    color: #ffbf00;
+    color: #4A0A1A;
+    font-size: 22px;
   }
   
-  p {
-    font-size: 18px;
+  .par {
+    text-align: justify;
+    font-size: 16px;
     line-height: 1.6;
   }
   
-  ul {
-    list-style: none;
+  .ul {
+    text-align: justify;
+    list-style: inside;
     padding: 0;
   }
   
-  ul li {
-    font-size: 18px;
+  .ul li {
+    font-size: 16px;
     padding: 10px 0;
-    border-bottom: 1px solid #666;
+    border-bottom: none;
   }
   
-  ul li:last-child {
-    border-bottom: none;
+  .ul li:last-child {
+    border-bottom: 1px solid #666;
   }
   
   section {
     margin-bottom: 30px;
   }
   
+  .search-bar {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .search-bar input {
+    width: 45%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #4A0A1A;
+    border-radius: 5px;
+  }
+  
+  .bar::placeholder{
+    color: #a53860;
+  }
+
+  .achi{
+    text-align: center;
+    color: #4A0A1A;
+    font-size: 22px;
+  }
+
+  .awar{
+    text-align: center;
+    color: #4A0A1A;
+    font-size: 22px;
+  }

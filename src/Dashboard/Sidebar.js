@@ -11,7 +11,7 @@ function Sidebar(props) {
 
   return (
     <Grid item xs={1} md={13} >
-      <Paper elevation={9} sx={{ p: { xs: 3, md: 6 }, bgcolor: 'grey.200' }}>
+      <Paper elevation={9} sx={{ p: { xs: 3, md: 6 }, bgcolor: '#fce0e5' }}>
         <Typography variant="h6" gutterBottom >
           Social
         </Typography>
