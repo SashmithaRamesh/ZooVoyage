@@ -36,8 +36,13 @@ function Cart() {
       <div className="cart-total">
         <h2>Grand Total: ₹{totalAmount}</h2>
       </div>
-      <button onClick={clearCart} className="clear-cart">Clear Cart</button>
-      <button onClick={() => navigate('/payment')} className="pay-button">Proceed to Payment</button>
+      <div>
+        <button onClick={clearCart} className="clear-cart">Clear Cart</button>
+      </div>
+      <br></br>
+      <div>
+        <button onClick={() => navigate('/payment')} className="pay-button">Proceed to Payment</button>
+      </div>
     </div>
   );
 }

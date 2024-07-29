@@ -102,7 +102,7 @@ function BookingForm() {
             </div>
           ))}
         </div>
-        <button type="submit" className='add'>Add to Cart</button>
+        <button type="submit" className='add'>Next</button>
       </form>
     </div>
   );
