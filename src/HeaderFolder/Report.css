@@ -23,7 +23,7 @@
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 0 10px #4A0A1A;
-    background-color: #eee8e8;
+    background-color: #f6e8d9;
   }
   
   .report-form-group {
@@ -43,7 +43,7 @@
   .contact-form input{
     width: 35%;
     padding: 10px;
-    border: 1px solid #4A0A1A;
+    border: 1.3px solid #4A0A1A;
     border-radius: 5px;
     font-size: 1em;
     color: #4A0A1A;
@@ -52,7 +52,7 @@
   .contact-form textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #4A0A1A;
+    border: 1.3px solid #4A0A1A;
     border-radius: 5px;
     font-size: 1em;
     color: #4A0A1A;
