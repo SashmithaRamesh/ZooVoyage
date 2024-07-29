@@ -11,7 +11,7 @@ function Cart() {
 
   return (
     <div className="cart-page">
-      <h1>Your Cart</h1>
+      <h4>YOUR CART</h4>
       {cart.map((item, index) => (
         <div key={index} className="cart-item">
           <h2>Booking for: {new Date(item.date).toDateString()}</h2>

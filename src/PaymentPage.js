@@ -54,7 +54,7 @@ function PaymentPage() {
     <div className='pay'>
 
     <div className="payment-page">
-      <h1>Select Payment Method</h1>
+      <h4>SELECT PAYMENT METHOD</h4>
       <div className="payment-options">
         <button
           className={paymentMethod === 'Credit Card' ? 'selected' : ''}
