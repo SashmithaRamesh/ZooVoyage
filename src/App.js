@@ -18,6 +18,7 @@ import Profile from './FirstPage/Profile';
 import Booking from './Bookings/Booking';
 import BookingForm from './ZooTicket/BookingForm';
 import Cart from './ZooTicket/Cart';
+import PaymentPage from './PaymentPage'; // Import the payment page
 import { CartProvider } from './ZooTicket/CartContext';
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
                 <Route path='/booking' element={<Booking />} />
                 <Route path='/bookingform' element={<BookingForm />} />
                 <Route path='/cart' element={<Cart />} />
+                <Route path='/payment' element={<PaymentPage />} /> {/* Add the payment page route */}
               </Routes>
             </BrowserRouter>
           </div>

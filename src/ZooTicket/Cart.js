@@ -1,9 +1,11 @@
 import React, { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { CartContext } from './CartContext';
 import './Cart.css';
 
 function Cart() {
   const { cart, clearCart } = useContext(CartContext);
+  const navigate = useNavigate();
 
   const totalAmount = cart.reduce((sum, item) => sum + item.totalAmount, 0);
 
@@ -12,7 +14,7 @@ function Cart() {
       <h1>Your Cart</h1>
       {cart.map((item, index) => (
         <div key={index} className="cart-item">
-          <h2>Booking for: {new Date(item.date).toDateString()}</h2> {/* Convert item.date to Date object */}
+          <h2>Booking for: {new Date(item.date).toDateString()}</h2>
           <div className="tickets">
             {item.tickets.map((ticket, i) => (
               <div key={i} className="ticket-detail">
@@ -35,6 +37,7 @@ function Cart() {
         <h2>Grand Total: ₹{totalAmount}</h2>
       </div>
       <button onClick={clearCart} className="clear-cart">Clear Cart</button>
+      <button onClick={() => navigate('/payment')} className="pay-button">Proceed to Payment</button>
     </div>
   );
 }
