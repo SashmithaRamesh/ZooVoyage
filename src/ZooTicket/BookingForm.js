@@ -67,7 +67,7 @@ function BookingForm() {
 
   return (
     <div className="booking-page">
-      <p>Book Your Tickets</p>
+      <p>BOOK YOUR TICKETS</p>
       <div className="date-selector">
         <input
           type="date"
@@ -89,7 +89,7 @@ function BookingForm() {
           </div>
         ))}
         <div className="add-ons">
-          <h3>Add Ons</h3>
+          <b><h6>ADD ONS</h6></b>
           {addOns.map(addOn => (
             <div key={addOn.name} className="add-on">
               <input
