@@ -48,6 +48,10 @@ const Profile = () => {
               <td><b className='col'>Mobile Number:</b></td>
               <td><input type="tel" name="contact" value={editedUser.contact} onChange={handleInputChange} /></td>
             </tr>
+            <tr>
+              <td><b className='col'>Password:</b></td>
+              <td><input type="password" name="password" value={editedUser.password} onChange={handleInputChange} /></td>
+            </tr>
             {/* Add other fields as needed */}
             <tr>
               <td colSpan="2" style={{ textAlign: 'center' }}>
