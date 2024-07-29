@@ -39,7 +39,7 @@ const Register = () => {
       .then((response) => {
         console.log('Signup successful:', response.data);
         setUser(response.data); // Set user details in context
-        navigate('/profile'); // Redirect to profile page after successful registration
+        navigate('/'); // Redirect to profile page after successful registration
       })
       .catch((error) => {
         console.error('Signup error:', error);
