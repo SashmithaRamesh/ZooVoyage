@@ -4,10 +4,10 @@ import { useNavigate } from 'react-router-dom';
 import { CartContext } from './CartContext';
 
 const categories = [
-  { name: 'Adult', price: 100 },
-  { name: 'Child', price: 50 },
-  { name: 'Senior Citizen', price: 60 },
   { name: 'Infant', price: 0 },
+  { name: 'Child', price: 50 },
+  { name: 'Adult', price: 100 },
+  { name: 'Senior Citizen', price: 60 },
   { name: 'Specially Abled', price: 0 },
 ];
 
@@ -66,6 +66,7 @@ function BookingForm() {
   };
 
   return (
+    <div className='book'>
     <div className="booking-page">
       <p>BOOK YOUR TICKETS</p>
       <div className="date-selector">
@@ -74,7 +75,7 @@ function BookingForm() {
           value={selectedDate}
           min={today} // Ensures that past dates are not selectable
           onChange={(e) => setSelectedDate(e.target.value)}
-        />
+          />
       </div>
       <form className="booking-form" onSubmit={handleSubmit}>
         {tickets.map((ticket, index) => (
@@ -97,13 +98,14 @@ function BookingForm() {
                 id={addOn.name}
                 checked={selectedAddOns.includes(addOn)}
                 onChange={() => handleAddOnChange(addOn)}
-              />
+                />
               <label htmlFor={addOn.name}>{addOn.name}</label>
             </div>
           ))}
         </div>
         <button type="submit" className='add'>Next</button>
       </form>
+    </div>
     </div>
   );
 }

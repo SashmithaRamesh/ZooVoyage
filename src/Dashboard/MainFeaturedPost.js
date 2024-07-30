@@ -12,18 +12,20 @@ function MainFeaturedPost(props) {
 
   return (
     <Paper
-      sx={{
-        position: 'relative',
-        backgroundColor: 'grey.800',
-        color: '#fff',
-        mb: 4,
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-        backgroundImage: `url(${post.image})`,
-      }}
+    sx={{
+      position: 'relative',
+      backgroundColor: 'grey.800',
+      color: '#fff',
+      mb: 4,
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center',
+      backgroundImage: `url(${post.image})`,
+      '&:hover': {
+        transform: 'scale(1.02)', 
+      },
+    }}
     >
-      {/* Increase the priority of the hero background image */}
       {<img style={{ display: 'none' }} src={post.image} alt={post.imageText} />}
       <Box
         sx={{
@@ -50,16 +52,10 @@ function MainFeaturedPost(props) {
             <Typography variant="h6" color="inherit" paragraph>
               {post.description}
             </Typography>
-            <Link to="/about"> 
-            <Button size="medium"
-            sx={{
+            <Link to="/about"  sx={{
               backgroundColor: '#a53860',
-              color: 'white',
-              '&:hover': {
-                backgroundColor: '#ce4257',
-                borderColor: '#DA627D'
-              },
-              }}>{post.linkText}</Button>
+              color: 'white',}}> 
+            {post.linkText}
             </Link>
           </Box>
         </Grid>

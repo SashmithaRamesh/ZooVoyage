@@ -57,23 +57,6 @@
   section {
     margin-bottom: 30px;
   }
-  
-  .search-bar {
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .search-bar input {
-    width: 45%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #4A0A1A;
-    border-radius: 5px;
-  }
-  
-  .bar::placeholder{
-    color: #a53860;
-  }
 
   .achi{
     text-align: center;

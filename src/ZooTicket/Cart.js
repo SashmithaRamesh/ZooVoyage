@@ -10,6 +10,7 @@ function Cart() {
   const totalAmount = cart.reduce((sum, item) => sum + item.totalAmount, 0);
 
   return (
+    <div className='cart'>
     <div className="cart-page">
       <h4>YOUR CART</h4>
       {cart.map((item, index) => (
@@ -43,6 +44,7 @@ function Cart() {
       <div>
         <button onClick={() => navigate('/payment')} className="pay-button">Proceed to Payment</button>
       </div>
+    </div>
     </div>
   );
 }

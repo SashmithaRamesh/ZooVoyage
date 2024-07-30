@@ -1,22 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './AboutUs.css';
 
 const AboutUs = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-
-  const handleSearchChange = (e) => {
-    setSearchQuery(e.target.value);
-  };
 
   return (
     <div className='about'>
-      <div className="search-bar">
-        <input className='bar'
-          type="text"
-          placeholder="Search zoo name..."
-          value={searchQuery}
-          onChange={handleSearchChange}
-        />
+      <div>
+        <br></br>
         <h2 className='ab'>ABOUT US</h2>
       </div>
       <div className="about-us-container">
