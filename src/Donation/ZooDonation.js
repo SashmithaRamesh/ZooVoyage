@@ -27,7 +27,12 @@ const ZooDonationion = () => {
   return (
     
     <div className="donation-page">
-      <h1>Make a Donation</h1>
+      <div>
+        <br></br>
+        <h5 className='don'>MAKE A DONATION</h5>
+      </div>
+      <div>
+        <br></br>
       <form onSubmit={handleSubmit} className="donation-form">
         <div className="form-group">
          Select Zoo:
@@ -47,7 +52,7 @@ const ZooDonationion = () => {
             onChange={(e) => setPurpose(e.target.value)}
             required
             placeholder="Enter the purpose of your donation"
-          ></textarea>
+            ></textarea>
         </div>
 
         <div className="form-group">
@@ -59,7 +64,7 @@ const ZooDonationion = () => {
             onChange={(e) => setName(e.target.value)}
             required
             placeholder="Enter your name"
-          />
+            />
         </div>
 
         <div className="form-group">
@@ -72,7 +77,7 @@ const ZooDonationion = () => {
             onChange={(e) => setEmail(e.target.value)}
             required
             placeholder="Enter your email"
-          />
+            />
         </div>
 
         <div className="form-group">
@@ -84,13 +89,13 @@ const ZooDonationion = () => {
             onChange={(e) => setPhone(e.target.value)}
             required
             placeholder="Enter your phone number"
-          />
+            />
         </div>
 
         <button type="submit" className="submit-button">Proceed to Payment</button>
       </form>
+      </div>
     </div>
-  
   );
 };
 

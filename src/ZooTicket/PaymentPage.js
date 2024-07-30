@@ -54,7 +54,7 @@ function PaymentPage() {
     <div className='pay'>
 
     <div className="payment-page">
-      <h4>SELECT PAYMENT METHOD</h4>
+      <h2>SELECT PAYMENT METHOD</h2>
       <div className="payment-options">
         <button
           className={paymentMethod === 'Credit Card' ? 'selected' : ''}
@@ -79,7 +79,7 @@ function PaymentPage() {
         {(paymentMethod === 'Credit Card' || paymentMethod === 'Debit Card') && (
             <div className="card-details-form">
             <div>
-              <label>Card Number:</label>
+              <label className='card-det'>Card Number:</label>
               <input
                 type="text"
                 name="cardNumber"
@@ -89,7 +89,7 @@ function PaymentPage() {
                 />
             </div>
             <div>
-              <label>Bank Name:</label>
+              <label className='card-det'>Bank Name:</label>
               <input
                 type="text"
                 name="bankName"
@@ -99,7 +99,7 @@ function PaymentPage() {
                 />
             </div>
             <div>
-              <label>Expiry Date:</label>
+              <label className='card-det'>Expiry Date:</label>
               <input
                 type="text"
                 name="expiryDate"
@@ -110,7 +110,7 @@ function PaymentPage() {
                 />
             </div>
             <div>
-              <label>Name on Card:</label>
+              <label className='card-det'>Name on Card:</label>
               <input
                 type="text"
                 name="cardName"

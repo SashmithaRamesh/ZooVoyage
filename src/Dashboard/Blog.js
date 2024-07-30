@@ -59,11 +59,11 @@ const sidebar = {
 const customTheme = createTheme({
   palette: {
     background: {
-      default: '#f6e2cb', // Customize the default background color
+      default: '#f8e9d7', 
     },
   },
   typography: {
-    fontFamily: 'Arial, sans-serif', // Customize the default font family
+    fontFamily: 'Arial, sans-serif',
   },
 });
 

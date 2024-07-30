@@ -15,10 +15,10 @@ import { ChakraProvider, theme } from '@chakra-ui/react';
 import VideoCarousel from './components/VideoCarousel';
 import { UserProvider } from './FirstPage/UserContext';
 import Profile from './FirstPage/Profile';
-import Booking from './Bookings/Booking';
+import Booking from './ZooTicket/Booking';
 import BookingForm from './ZooTicket/BookingForm';
 import Cart from './ZooTicket/Cart';
-import PaymentPage from './PaymentPage'; // Import the payment page
+import PaymentPage from './ZooTicket/PaymentPage';
 import { CartProvider } from './ZooTicket/CartContext';
 
 function App() {

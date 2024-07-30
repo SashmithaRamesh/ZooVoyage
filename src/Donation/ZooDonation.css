@@ -11,11 +11,10 @@
 
 
 .donation-page {
-  display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(135deg, #e2e2e2 25%, #f08686 75%);
+  background: linear-gradient(135deg, #e2e2e2 25%, #fdcece 75%);
   background-size: cover;
   background-repeat: repeat-x;
   animation: scrollBackground 10s linear infinite, fadeIn 1s ease-in-out;
@@ -32,6 +31,7 @@
   transition: box-shadow 0.3s ease, transform 0.3s ease, border 0.3s ease;
   transform: translateY(-20px);
   animation: slideIn 1s ease-out;
+  margin-left: 450px;
 }
 
 .donation-form:hover {
@@ -76,7 +76,7 @@ textarea {
 }
 
 .submit-button {
-  background-color: #ff7f7f;
+  background-color: #a53860;
   border: none;
   color: #ffffff;
   padding: 10px 15px;
@@ -94,7 +94,6 @@ textarea {
   left: 50%;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.2);
   border-radius: 4px;
   transition: opacity 0.3s ease;
   opacity: 0;
@@ -107,9 +106,8 @@ textarea {
 }
 
 .submit-button:hover {
-  background-color: #ff5c5c;
+  background-color: #ea8097;
   transform: scale(1.05);
-  box-shadow: 0 0 8px rgba(255, 105, 180, 0.7);
 }
 
 @keyframes fadeIn {
@@ -130,4 +128,8 @@ textarea {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.don{
+  color:#4A0A1A;
 }

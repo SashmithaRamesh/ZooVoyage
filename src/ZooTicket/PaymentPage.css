@@ -9,10 +9,11 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background: linear-gradient(135deg, #e2e2e2 25%, #f5b0b0 75%);
 }
 
 .payment-page {
-  background: #fff;
+  background: #f8e7d5;
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
@@ -32,10 +33,11 @@
   }
 }
 
-.payment-page h1 {
+.payment-page h2 {
   text-align: center;
   margin-bottom: 20px;
   color: #4A0A1A;;
+  font-size: 19px;
 }
 
 .payment-options {
@@ -74,7 +76,7 @@
   flex-direction: column;
 }
 
-.card-details-form label,
+.card-det,
 .upi-details-form label {
   font-weight: bold;
   margin-bottom: 5px;
@@ -83,11 +85,13 @@
 
 .card-details-form input,
 .upi-details-form input {
-  padding: 10px;
+  padding: 8px;
   font-size: 16px;
   border: 2px solid #ddd;
   border-radius: 8px;
   transition: border-color 0.3s ease;
+  max-width: 50%;
+  margin-left: 100px;
 }
 
 .card-details-form input:focus,

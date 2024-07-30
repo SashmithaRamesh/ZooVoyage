@@ -12,10 +12,10 @@ function Cart() {
   return (
     <div className='cart'>
     <div className="cart-page">
-      <h4>YOUR CART</h4>
+      <p>YOUR CART</p>
       {cart.map((item, index) => (
         <div key={index} className="cart-item">
-          <h2>Booking for: {new Date(item.date).toDateString()}</h2>
+          <h2>BOOKING FOR: {new Date(item.date).toDateString()}</h2>
           <div className="tickets">
             {item.tickets.map((ticket, i) => (
               <div key={i} className="ticket-detail">
@@ -23,15 +23,15 @@ function Cart() {
               </div>
             ))}
           </div>
+          <br></br>
+            <h2>ADD-ONs:</h2>
           <div className="add-ons">
-            <h3>Add-Ons:</h3>
             {item.addOns.map((addOn, i) => (
               <div key={i} className="add-on-detail">
                 <span>{addOn.name}: ₹{addOn.price}</span>
               </div>
             ))}
           </div>
-          <h3>Total: ₹{item.totalAmount}</h3>
         </div>
       ))}
       <div className="cart-total">
