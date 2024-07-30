@@ -13,8 +13,8 @@ const categories = [
 
 const addOns = [
   { name: 'Butterfly Park', price: 30 },
-  { name: 'Still Camera', price: 50 },
-  { name: 'Video Camera', price: 100 },
+  { name: 'Bus Safari', price: 50 },
+  { name: 'Jeep Safari', price: 100 },
 ];
 
 function BookingForm() {
