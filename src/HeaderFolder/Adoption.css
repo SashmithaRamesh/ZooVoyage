@@ -1,11 +1,6 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
-}
 
-.container {
+
+.container-adopt {
     width: 100%;
     padding: 20px;
     background-color: #fff;
@@ -21,7 +16,7 @@ h1 {
     font-weight: bold;
 }
 
-.carousel {
+.carousel-adopt{
     position: relative;
     display: flex;
     justify-content: center;
@@ -36,7 +31,7 @@ h1 {
     height: 700px; /* Adjust the height as needed */
 }
 
-.image-card {
+.image-card-adopt{
     position: absolute;
     text-align: center;
     background-color: #f9f9f9;

@@ -29,13 +29,13 @@ const Adoption = () => {
     };
 
     return (
-        <div className="container">
+        <div className="container-adopt">
             <h1>Animal Adoption</h1>
-            <div className="carousel">
+            <div className="carousel-adopt">
                 {animals.map((animal, index) => (
                     <div
                         key={index}
-                        className="image-card"
+                        className="image-card-adopt"
                         style={{
                             opacity: currentImageIndex === index ? 1 : 0,
                             zIndex: currentImageIndex === index ? 1 : 0,
