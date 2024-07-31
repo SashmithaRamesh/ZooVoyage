@@ -5,7 +5,7 @@ import Login from './FirstPage/Login';
 import Register from './FirstPage/Register';
 import Blog from './Dashboard/Blog';
 import AboutUs from './HeaderFolder/AboutUs';
-import Publication from './HeaderFolder/Publication';
+import Publication from './HeaderFolder/Adoption';
 import Report from './HeaderFolder/Report';
 import NearbyResort from './HeaderFolder/NearbyResort';
 import ZooEvents from './HeaderFolder/ZooEvents';
@@ -20,6 +20,8 @@ import BookingForm from './ZooTicket/BookingForm';
 import Cart from './ZooTicket/Cart';
 import PaymentPage from './ZooTicket/PaymentPage';
 import { CartProvider } from './ZooTicket/CartContext';
+import Adoption from './HeaderFolder/Adoption';
+
 
 function App() {
   return (
@@ -44,7 +46,8 @@ function App() {
                 <Route path='/booking' element={<Booking />} />
                 <Route path='/bookingform' element={<BookingForm />} />
                 <Route path='/cart' element={<Cart />} />
-                <Route path='/payment' element={<PaymentPage />} /> {/* Add the payment page route */}
+                <Route path='/payment' element={<PaymentPage />} />
+                <Route path='/adoption' element={<Adoption />} />
               </Routes>
             </BrowserRouter>
           </div>

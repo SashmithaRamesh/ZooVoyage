@@ -15,7 +15,7 @@ const sections = [
   { title: 'NEARBY RESORT ', url: '/resort' },
   { title: 'ANIMAL AND BIRDS', url: '/video' },
   { title: 'ZOO EVENTS', url: '/events' },
-  { title: 'PUBLICATION', url: '/publication' },
+  { title: 'ADOPTION', url: '/adoption' },
   { title: 'REPORT', url: '/report' },
 ];
 

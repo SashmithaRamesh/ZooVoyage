@@ -4,8 +4,17 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: url('https://img.freepik.com/free-photo/lion-pride-dry-forest_23-2151661682.jpg?uid=R119970806&ga=GA1.1.2009190256.1721713402&semt=ais_user') no-repeat center center/cover;
   overflow: hidden;
+}
+
+#background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Make sure the video is behind other content */
 }
 
   
@@ -16,6 +25,7 @@
     width: 100%;
     width: 400px;
     height: 300px;
+    margin-left: 700px;
   }
   
   .login-form h2 {

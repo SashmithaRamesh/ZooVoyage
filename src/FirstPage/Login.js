@@ -38,6 +38,10 @@ const Login = () => {
 
   return (
     <div className="login-container">
+      <video autoPlay muted loop id="background-video">
+        <source src="https://videos.pexels.com/video-files/8282314/8282314-sd_640_360_25fps.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
       <form onSubmit={handleLogin} className="login-form">
         <br></br>
         <h2>LOGIN</h2>

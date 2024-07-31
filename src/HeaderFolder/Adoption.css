@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.carousel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    border: 2px solid #ddd;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 700px; /* Adjust the height as needed */
+}
+
+.image-card {
+    position: absolute;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: opacity 1s ease-in-out, transform 0.5s ease;
+    width: 100%;
+    height: 100%; /* Ensure the card takes full height of the carousel */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-card img {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: cover; /* Adjusts the image to cover the container while maintaining aspect ratio */
+    transition: opacity 1s ease-in-out;
+}
+
+.buttons {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+}
+
+.view-button,
+.adopt-button {
+    padding: 12px 25px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.view-button:hover,
+.adopt-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.adopt-button {
+    background-color: #f44336;
+}
+
+.adopt-button:hover {
+    background-color: #e53935;
+}
