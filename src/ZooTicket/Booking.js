@@ -1,14 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Booking.css';
 
 const Booking = () => {
+
+  useEffect(() => {
+    const ticketOptions = document.querySelectorAll('.ticket-option');
+    ticketOptions.forEach((option, index) => {
+      option.style.animationDelay = `${index * 0.5}s`; // Delay each option by 0.5s
+      option.classList.add('roll-in');
+    });
+  }, []);
+
   return (
     <div className="home-page">
-      <div className='choose'>
-          <h2 className='choose-tic'><br></br>CHOOSE TICKETS <br></br></h2>
+      <div className='choose slide-in'>
+        <h2 className='choose-tic'><br />CHOOSE TICKETS <br /></h2>
       </div>
-      <br></br>
+      <br />
       <div className="ticket-options">
         <Link to="/bookingform" className="ticket-option">
           <span className='tick'>ZOO&nbsp;&nbsp;&nbsp;or SANCTUARY</span>
@@ -19,7 +28,7 @@ const Booking = () => {
           <img className="ticket-option-butterfly" src="https://media2.thrillophilia.com/images/photos/000/259/453/original/1589360691_92ce9941ee06035f2e9277c0de872505fafd8366-tc-img-preview.jpg?width=975&height=600" alt="Butterfly Park" />
         </Link>
       </div>
-      <br></br>
+      <br />
       <div className="ticket-options">
         <Link to="/bookingform" className="ticket-option">
           <span className='tick'>BUS SAFARI</span>
@@ -35,4 +44,3 @@ const Booking = () => {
 };
 
 export default Booking;
-
