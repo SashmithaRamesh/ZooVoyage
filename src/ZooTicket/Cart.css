@@ -1,31 +1,34 @@
-.cart{
-  text-align: center;
-  padding: 25px;
+.cart {
+  font-family: 'Arial', sans-serif;
   background-color: #f4f4f4;
+  padding: 35px;
+  box-sizing: border-box;
+  text-align: center;
 }
 
 .cart-page {
   max-width: 800px;
-  padding: 20px;
-  background-color: #f8ead9;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #ffffff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  margin-left: 300px;
-  margin-top: 10px;
+  position: relative;
 }
 
 .cart-page p {
-  font-size: 1.3em;
-  color: #4A0A1A;
-  text-align: center;
+  font-size: 1.5em;
+  color: #333;
   margin-bottom: 20px;
 }
 
 .cart-item {
-  margin-bottom: 20px;
-  padding: 10px;
+  background-color: #f9f9f9;
   border: 1px solid #ddd;
   border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .cart-item h2 {
@@ -39,12 +42,27 @@
 }
 
 .ticket-detail, .add-on-detail {
-  padding: 5px 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
   font-size: 16px;
+  color: #333;
+  animation: rollIn 1s ease-out; /* Roll-in animation for each detail */
 }
 
-.cart-total, .clear-cart {
-  text-align: center;
+.item-total {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.cart-total {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
   margin-top: 20px;
 }
 
@@ -54,24 +72,40 @@
   color: #4A0A1A;
 }
 
+.clear-cart, .pay-button {
+  padding: 12px 24px;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
 .clear-cart {
-  padding: 10px 20px;
-    color: white;
-    background-color: #a53860;
-    border: none;
-    border-radius: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    align-self: center;
-    margin-top: 20px;
+  background-color: #a53860;
 }
 
 .clear-cart:hover {
   background-color: #ea8097;
 }
 
-.add-ons h2{
-  font-size: 18px;
-  color: #4A0A1A;
-  text-align: center;
+.pay-button {
+  background-color: #4A90E2;
+}
+
+.pay-button:hover {
+  background-color: #357ABD;
+}
+
+@keyframes rollIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
