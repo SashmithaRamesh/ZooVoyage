@@ -1,22 +1,22 @@
-
-
 .container-adopt {
     width: 100%;
     padding: 20px;
-    background-color: #fff;
+    background-color: #f3f1e7; /* Light, natural background color */
     text-align: center;
     max-width: 1200px;
     margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
     margin-bottom: 20px;
-    color: #333;
+    color: #2d5d34; /* Dark green color */
     font-size: 2.5em;
     font-weight: bold;
 }
 
-.carousel-adopt{
+.carousel-adopt {
     position: relative;
     display: flex;
     justify-content: center;
@@ -28,29 +28,60 @@ h1 {
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
-    height: 700px; /* Adjust the height as needed */
+    height: 600px; /* Adjust the height as needed */
 }
 
-.image-card-adopt{
+.image-card-adopt {
     position: absolute;
     text-align: center;
-    background-color: #f9f9f9;
+    background-color: #f3f1e7;
     border-radius: 10px;
     overflow: hidden;
-    transition: opacity 1s ease-in-out, transform 0.5s ease;
-    width: 100%;
-    height: 100%; /* Ensure the card takes full height of the carousel */
+    width: 90%;
+    height: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: opacity 1s ease-in-out, transform 1s ease;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(50px); /* Start slightly below */
+    animation: floatIn 1.5s ease forwards;
 }
 
-.image-card img {
-    width: 100%;
+.image-card-adopt.active {
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Move to position */
+    z-index: 1; /* Ensure it's on top */
+}
+
+.image-card-adopt.exiting {
+    opacity: 0; /* Fade out */
+    transform: translateY(-50px); /* Move out to the top */
+    z-index: 0; /* Send to the back */
+}
+
+@keyframes floatIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.image-card-adopt img {
+    width: 80%;
     height: auto;
-    max-height: 100%;
+    max-height: 80%;
     object-fit: cover; /* Adjusts the image to cover the container while maintaining aspect ratio */
-    transition: opacity 1s ease-in-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-card-adopt img:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add shadow effect */
 }
 
 .buttons {
@@ -76,7 +107,7 @@ h1 {
 
 .view-button:hover,
 .adopt-button:hover {
-    background-color: #45a049;
+    background-color: #388e3c;
     transform: scale(1.05);
 }
 
@@ -85,5 +116,5 @@ h1 {
 }
 
 .adopt-button:hover {
-    background-color: #e53935;
+    background-color: #d32f2f;
 }
