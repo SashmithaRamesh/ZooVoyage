@@ -145,7 +145,7 @@
   animation: fadeIn 0.5s forwards; /* Apply fade-in animation */
 }
 
-/* Fade-in animation */
+
 @keyframes fadeIn {
   from {
     opacity: 0;

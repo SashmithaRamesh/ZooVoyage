@@ -20,7 +20,7 @@ function Cart() {
               {item.tickets.map((ticket, i) => (
                 <div key={i} className="ticket-detail">
                   <span>{ticket.name}</span>
-                  <span>{ticket.quantity} x {ticket.price}</span>
+                  <span>{ticket.quantity} x {ticket.price} = {ticket.quantity * ticket.price}</span>
                 </div>
               ))}
             </div>

@@ -1,61 +1,107 @@
+/* Keyframes for animation */
+@keyframes spreadIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 
-  .events-page {
-    background-color: #f6e2cb;
-    max-width: 100%;
-    margin: 0 auto;
+@keyframes flyIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
   }
-  
-  .page-title {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #4A0A1A;
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
-  
-  .events-container {
-    display: flex;
-    flex-direction: column;
-    max-width: 1000px;
-    gap: 20px;
-    margin-left: 193px;
-    justify-content: center;
-  }
-  
-  .event-card {
-    background: #fbc4ab;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .event-title {
-    font-size: 1.3em;
-    color: #a53860;
-    margin-bottom: 10px;
-  }
-  
-  .event-description {
-    font-size: 1.2em;
-    color: #333;
-    margin-bottom: 15px;
-  }
-  
-  .event-media {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    align-items: center;
-  }
-  
-  .event-image {
-    width: 45%;
-    height: auto;
-    border-radius: 8px;
-  }
-  
-  .event-video {
-    width: 45%;
-    height: 270px;
-    border-radius: 8px;
-  }
-  
+}
+
+/* Page Container */
+.events-page {
+  background-color: #e0ffe5; /* Light green to match a zoo/nature theme */
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Title */
+.page-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2a6f33; /* Dark green for a natural look */
+  font-size: 2em;
+  animation: flyIn 1s ease-out;
+}
+
+/* Events Container */
+.events-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  gap: 30px;
+  margin: 0 auto;
+  justify-content: center;
+  animation: spreadIn 1.2s ease-out;
+}
+
+/* Individual Event Card */
+.event-card {
+  background: #c7e6b2; /* Softer green shade */
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(42, 111, 51, 0.3);
+  padding: 20px;
+  text-align: center;
+  animation: spreadIn 0.8s ease-out;
+}
+
+/* Event Title */
+.event-title {
+  font-size: 1.5em;
+  color: #2a6f33; /* Dark green */
+  margin-bottom: 10px;
+}
+
+/* Event Description */
+.event-description {
+  font-size: 1.2em;
+  color: #3d3d3d;
+  margin-bottom: 15px;
+}
+
+/* Media (Image and Video) */
+.event-media {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Event Image */
+.event-image {
+  width: 45%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.event-image:hover {
+  transform: scale(1.05);
+}
+
+/* Event Video */
+.event-video {
+  width: 45%;
+  height: 270px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.event-video:hover {
+  transform: scale(1.05);
+}
