@@ -1,10 +1,10 @@
 import React, { useState, useContext } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { UserContext } from './UserContext';
 import './Register.css';
 
-const Register = () => {
+const Register = ({ onLoginClick }) => {
   const navigate = useNavigate();
   const [confirm, setConfirm] = useState('');
   const [signupDetails, setSignupDetails] = useState({
@@ -25,7 +25,7 @@ const Register = () => {
     const userExists = await checkUserExists(signupDetails.username);
     if (userExists) {
       console.log('User already exists. Redirecting to login...');
-      navigate('/login');
+      onLoginClick(); // Call the function to switch to the Login component
       return;
     }
 
@@ -114,7 +114,7 @@ const Register = () => {
           Register
         </button></h6>
         <div className="login-link">
-          <h6 className='z'><b>Already have an account? </b><Link to="/login">Login here</Link></h6>
+          <h6 className='z'><b>Already have an account? </b><span onClick={onLoginClick} style={{cursor: 'pointer', color: 'blue'}}>Login here</span></h6>
         </div>
       </form>
     </div>

@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { UserContext } from './UserContext';
 import './Login.css';
 
-const Login = () => {
+const Login = ({ onRegisterClick }) => {
   const navigate = useNavigate();
   const [users, setUsers] = useState([]);
   const [loginDetails, setLoginDetails] = useState({
@@ -28,7 +28,7 @@ const Login = () => {
       navigate('/');
     } else {
       alert('Account not found. Please register.');
-      navigate('/register');
+      onRegisterClick(); // Call the function to switch to the Register component
     }
   };
 
@@ -39,7 +39,7 @@ const Login = () => {
   return (
     <div className="login-container">
       <video autoPlay muted loop id="background-video">
-        <source src="https://videos.pexels.com/video-files/8282314/8282314-sd_640_360_25fps.mp4" type="video/mp4" />
+        <source src="" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <form onSubmit={handleLogin} className="login-form">
@@ -68,7 +68,7 @@ const Login = () => {
         <h6><button type="submit" className="login-button">Login</button></h6>
         
         <div className="register-link">
-          <h6 className='z'><b>New User? </b><Link to="/register">Register here</Link></h6>
+          <h6 className='z'><b>New User? </b><span onClick={onRegisterClick} style={{cursor: 'pointer', color: 'blue'}}>Register here</span></h6>
         </div>
       </form>
     </div>
