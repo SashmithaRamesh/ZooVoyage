@@ -11,7 +11,7 @@ function Sidebar(props) {
 
   return (
     <Grid item xs={1} md={13} >
-      <Paper elevation={9} sx={{ p: { xs: 3, md: 6 }, bgcolor: '#fce0e5' }}>
+      <Paper elevation={9} sx={{ p: { xs: 3, md: 6 }, bgcolor: '#EC9836' }}>
         <Typography variant="h6" gutterBottom >
           Upload your Vlogs
         </Typography>

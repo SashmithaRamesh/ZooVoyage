@@ -1,4 +1,5 @@
 import * as React from 'react';
+import './Blog.css';
 import PropTypes from 'prop-types';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
@@ -12,15 +13,14 @@ function Header(props) {
 
   return (
     <React.Fragment>
-      <Toolbar sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Link to="/profile" style={{ textDecoration: 'none', color: '#4A0A1A' }}>
+      <Toolbar  sx={{ borderBottom: 1, borderColor: 'divider', backgroundColor: '#3b3e15'}}>
+      <Link to='/profile' style={{ textDecoration: 'none' }}>
           <Button
-            size="small"
             sx={{
-              backgroundColor: '#450920',
               color: 'white',
               '&:hover': {
-                backgroundColor: '#a53860',
+                color: 'white',
+                backgroundColor: '#B69E4A',
               },
             }}
           >
@@ -30,24 +30,23 @@ function Header(props) {
         <Typography
           component="h2"
           variant="h5"
-          color="#450920"
-          align="center"
+          color="white"
+          textAlign="center"
           noWrap
           sx={{ flex: 1 }}
         >
-          ZOO VOYAGE
+        <p className='zoovoyage'> ZOO VOYAGE </p>
         </Typography>
         <IconButton>
-          <SearchIcon sx={{ color: '#4A0A1A' }} />
+          <SearchIcon sx={{ color: 'white' }} />
         </IconButton>
         <Link to='/login' style={{ textDecoration: 'none' }}>
           <Button
-            size="small"
             sx={{
-              backgroundColor: '#450920',
               color: 'white',
               '&:hover': {
-              backgroundColor: '#a53860',
+                color: 'white',
+                backgroundColor: '#B69E4A',
               },
             }}
           >
@@ -59,10 +58,12 @@ function Header(props) {
           <Button
             size="small"
             sx={{
-              backgroundColor: '#450920',
               color: 'white',
+              border: '1px solid white',
               '&:hover': {
-              backgroundColor: '#a53860',
+                color: 'white',
+                backgroundColor: '#B69E4A',
+                border: '#B69E4A'
               },
             }}
           >
@@ -70,17 +71,16 @@ function Header(props) {
           </Button>
         </Link>
       </Toolbar>
-
       <Toolbar
         component="nav"
         variant="dense"
-        sx={{ justifyContent: 'space-between', overflowX: 'auto' }}
+        sx={{ justifyContent: 'space-between', overflowX: 'auto',backgroundColor: '#B69E4A'  }}
       >
         {sections.map((section) => (
           <Link
             key={section.title}
             to={section.url}
-            style={{ color: '#450920', textDecoration: 'none', padding: '8px', flexShrink: 0 }}
+            style={{ color: 'white', textDecoration: 'none', padding: '8px', flexShrink: 0 }}
             variant="body2"
           >
             {section.title}

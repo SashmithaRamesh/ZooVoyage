@@ -13,9 +13,9 @@ function FeaturedPost(props) {
   const { post } = props;
 
   return (
-    <Grid item xs={12} md={6}>
+    <Grid item xs={1} md={6}>
       <CardActionArea component="a" href="#">
-        <Card sx={{ display: 'flex' , backgroundColor: '#fbc4ab', '&:hover': {
+        <Card sx={{ display: 'flex' , backgroundColor: '#EFDA66', '&:hover': {
         transform: 'scale(1.02)'}, }}>
           <CardContent sx={{ flex: 1 }}>
             <Typography component="h2" variant="h6" color="#450920">
@@ -26,14 +26,18 @@ function FeaturedPost(props) {
               {post.description}
             </Typography>
             <Link to={post.url}>
-            <Button size="medium"
+              <Button
+              size="medium"
               sx={{
-              backgroundColor: '#450920',
-              color: 'white',
-              '&:hover': {
-                backgroundColor: '#a53860',
-              },
-              }}>
+                color: 'white',
+                backgroundColor: '#3b3e15',
+                '&:hover': {
+                  color: 'white',
+                  backgroundColor: '#B69E4A',
+                  border: '#B69E4A'
+                },
+              }}
+            >
               {post.click}
             </Button>
             </Link>

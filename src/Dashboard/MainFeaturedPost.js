@@ -19,10 +19,10 @@ function MainFeaturedPost(props) {
       mb: 4,
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'center',
+      backgroundPositionY: 'center',
       backgroundImage: `url(${post.image})`,
       '&:hover': {
-        transform: 'scale(1.02)', 
+        transform: 'scale(1.01)', 
       },
     }}
     >
@@ -38,7 +38,7 @@ function MainFeaturedPost(props) {
         }}
       />
       <Grid container>
-        <Grid item md={6}>
+        <Grid item md={25}>
           <Box
             sx={{
               position: 'relative',
@@ -46,45 +46,48 @@ function MainFeaturedPost(props) {
               pr: { md: 0 },
             }}
           >
-            <Typography component="h1" variant="h5" color="inherit" gutterBottom>
+            <Typography component="h1" variant="h5" color="#3b3e15" gutterBottom sx={{ fontWeight: 'bold' }}>
               {post.title}
             </Typography>
-            <Typography variant="h6" color="inherit" paragraph>
+            <Typography variant="h6" color="#dbd8d8" paragraph>
               {post.description}
             </Typography>
-            <Link to="/about"  sx={{
-              backgroundColor: '#a53860',
-              color: 'white',}}> 
+            <Link to="/about"  backgroundColor= '#dbd8d8'
+              sx={{  
+              color: '#dbd8d8',}}> 
             {post.linkText}
             </Link>
           </Box>
         </Grid>
         <Grid>
           <Box>
-            <br></br><br></br><br></br><br></br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <Link to="/booking">
             <Button size="medium"
-            sx={{
-              backgroundColor: '#a53860',
-              color: 'white',
-              '&:hover': {
-                backgroundColor: '#ce4257',
-                borderColor: '#DA627D'
-              },
+              sx={{
+                backgroundColor:"#3b3e15",
+                color: 'white',
+                '&:hover': {
+                  color: 'white',
+                  backgroundColor: '#B69E4A',
+                },
               }}>
                 Buy Tickets
               </Button>
             </Link>
             <br></br><br></br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <Button size="medium"
             sx={{
-              backgroundColor: '#a53860',
+              backgroundColor:"#3b3e15",
               color: 'white',
               '&:hover': {
-                backgroundColor: '#ce4257',
-                borderColor: '#DA627D'
+                color: 'white',
+                backgroundColor: '#B69E4A',
               },
             }}>
               Track Transactional Status
