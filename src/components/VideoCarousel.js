@@ -14,9 +14,26 @@ import birdvid2 from './videos/birdvid2.mp4';
 import birdvid3 from './videos/birdvid3.mp4';
 import birdvid4 from './videos/birdvid4.mp4';
 import ReactPlayer from "react-player";
+import Link from '@mui/material/Link';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import { keyframes } from '@mui/system';
 import "bootstrap/dist/css/bootstrap.css";
 
 const VideoCarousel = () => {
+
+  const glitter = keyframes`
+  0%, 100% {
+    opacity: 12;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1.6;
+    transform: scale(1.2);
+  }
+`;
+
   const AnimalVideoProperties = [
     {
       id: 1,
@@ -82,7 +99,7 @@ const VideoCarousel = () => {
     <div className="ac">
       <header className="hed">
         <br></br>
-        <h4>ZOO VOYAGE - EVENTS</h4>
+        <h5>ZOO VOYAGE - EVENTS</h5>
         <br></br>
       </header>
       <main className="ma">
@@ -90,7 +107,7 @@ const VideoCarousel = () => {
           <table className="tabheading">
               <tr>
                 <td><b>ANIMALS</b></td>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -191,6 +208,30 @@ const VideoCarousel = () => {
         </div>
       </main>
       <footer className="footer">
+      <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem' }}>
+          <Link href="https://facebook.com" color="inherit" target="_blank" rel="noopener">
+            <FacebookIcon sx={{ 
+              color: '#363811',
+              fontSize: 30,
+              animation: `${glitter} 1.5s infinite`
+            }}/>
+          </Link>
+          <Link href="https://twitter.com" color="inherit" target="_blank" rel="noopener">
+            <TwitterIcon sx={{ 
+              color: '#363811',
+              fontSize: 30,
+              animation: `${glitter} 1.5s infinite`
+            }}/>
+          </Link>
+          <Link href="https://instagram.com" color="inherit" target="_blank" rel="noopener">
+            <InstagramIcon sx={{ 
+              color: '#363811',
+              fontSize: 30,
+              animation: `${glitter} 1.5s infinite`
+            }}/>
+          </Link>
+        </div>
+        <br></br>
         <p>© 2024 Zoo Voyage. All rights reserved.</p>
       </footer>
     </div>

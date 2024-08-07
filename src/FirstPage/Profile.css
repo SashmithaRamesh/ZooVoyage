@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: url("https://cdn.pixabay.com/photo/2019/08/06/12/14/horse-4388203_640.jpg") no-repeat center center/cover;
+  background: url("https://c.wallhere.com/images/03/51/b8f63291febcf2b291d0b602eaca-1428583.jpg!s1") no-repeat center center/cover;
   overflow: hidden;
 }
 
@@ -21,7 +21,7 @@
   .profile-container h2 {
     margin-bottom: 20px;
     font-size: 22px;
-    color: #4A0A1A;
+    color: #3b3e15;
     text-align: center;
   }
   
@@ -43,14 +43,20 @@
   .profile-table input {
     width: calc(100% - 20px);
     padding: 8px;
-    border: 1px solid #4A0A1A;
+    border: 1.3px solid #3b3e15;
     border-radius: 15px;
     font-size: 16px;
     margin-left: 10px;
+    background-color: transparent;
+    color: white;
+  }
+
+  .profile-table input:hover{
+    border-color: #3b3e15;
   }
   
   .profile-table input:focus {
-    border-color: #a53860;
+    border-color: #B69E4A;
     outline: none;
   }
   
@@ -58,7 +64,7 @@
       width: 40%;
       padding: 10px;
       color: white;
-      background-color: #450920;
+      background-color: #3b3e15;
       border: none;
       border-radius: 10px;
       font-size: 16px;
@@ -66,11 +72,11 @@
   }
     
   .profile-table button:hover {
-    background-color: #a53860;
+    background-color: #B69E4A;
   }
   
   .profile-table button:active {
-    background-color: #dcb27e;
+    background-color: #af9431;
   }
   
   .profile-table td:first-child {
@@ -89,5 +95,6 @@
   }
   
   .col{
-    color: #4A0A1A;
+    color: white;
   }
+  

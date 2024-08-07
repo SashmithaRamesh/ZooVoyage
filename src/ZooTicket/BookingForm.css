@@ -167,7 +167,7 @@
 .add {
   padding: 12px 24px;
   color: white;
-  background-color: #a53860;
+  background-color: #3b3e15;
   border: none;
   border-radius: 10px;
   font-size: 18px;
@@ -178,5 +178,5 @@
 }
 
 .add:hover {
-  background-color: #ea8097;
+  background-color: #B69E4A;
 }

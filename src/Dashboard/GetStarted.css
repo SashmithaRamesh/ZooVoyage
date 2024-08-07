@@ -1,0 +1,115 @@
+/* Basic Reset */
+
+  .get-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 95%;
+    margin-left: 35px;
+  }
+  
+  .get-header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    background-color: #3b3e15;
+  }
+  
+  .get-header-buttons {
+    display: flex;
+    gap: 5px;
+  }
+
+  .get-header-button-login{
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .get-header-button-login:hover {
+    color: white;
+    background-color: #B69E4A;
+  }
+
+  .get-header-button-signup{
+    color: white;
+    border: 1px solid white;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+  .get-header-button-signup:hover {
+    color: white;
+    background-color: #B69E4A;
+    border-color: #B69E4A;
+  }
+
+  .get-main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #f4f4f4;
+    background-image: url('https://img.freepik.com/free-photo/lion-pride-dry-forest_23-2151661715.jpg?size=626&ext=jpg&ga=GA1.1.1425240417.1723008179&semt=ais_hybrid');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .get-image-container {
+    position: relative; 
+    width: 100%; 
+    height: 100%;
+  }
+  
+  .get-started-button {
+    position: relative;
+    top: 15px;
+    left: 23%;
+    transform: translateX(-50%);
+    background-color: #3b3e15;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 19px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .get-started-button:hover {
+    background-color: #B69E4A;
+    transform: translateX(-50%) scale(1.05);
+  }
+  
+  .get-footer {
+    background-color: #B69E4A;
+    color: #fff;
+    text-align: center;
+    padding: 25px;
+  }
+  
+  .get-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .get-zoovoyage{
+    text-align: center;
+    color: white;
+    padding-right: 420px;
+    font-size: 20px;
+    margin-bottom: 7px;
+  }
+
+  .wel{
+    margin-top: 50px;
+    padding-left: 450px;
+    font-size: 22px;
+    font-weight: bold;
+  }

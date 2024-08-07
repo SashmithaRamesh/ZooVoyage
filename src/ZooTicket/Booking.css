@@ -1,27 +1,27 @@
 .home-page {
   text-align: center;
-  background-color: #e0f7fa;
+  background-color: #B69E4A;
   animation: fade-in 0.5s ease-in-out;
 }
 
 .choose {
   text-transform: inherit; 
-  padding: 2px; 
-  background-color: #004d40;
+  padding: 1px; 
+  background-color: #494c22;
   border-radius: 5px; 
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s, transform 0.3s;
 }
 
 .choose:hover {
-  background-color: #00796b;
+  background-color: #B69E4A;
   transform: scale(1.05); 
   cursor: pointer;
 }
 
 .choose-tic {
   margin-bottom: 20px;
-  font-size: 24px;
+  font-size: 22px;
   color: #ffffff;
   text-align: center;
 }
@@ -35,13 +35,13 @@
 }
 
 .ticket-option {
-  background: #00796b;
-  color: #ffffff;
+  background: #EFDA66;
+  color: #3b3e15;
   padding: 20px;
   border-radius: 10px;
   text-decoration: none;
   width: 37%;
-  height: 300px;
+  height: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,7 +57,7 @@
 
 .ticket-option:hover {
   transform: scale(1.05) rotate(3deg) translateY(-10px); /* Scale, rotate, and elevate on hover */
-  background: #004d40;
+  background: #f2e286;;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add shadow for a 3D effect */
 }
 
@@ -68,23 +68,13 @@
   transition: all 0.3s ease-in-out; /* Smooth transition for resizing */
 }
 
-.ticket-option img:hover {
-  width: 100%; /* Expand to full ticket size */
-  height: 100%;
-  border-radius: 10px; /* Match the ticket's border radius */
-  transform: none; /* No additional scaling needed */
-  box-shadow: none; /* Remove the box shadow when fully expanded */
-}
-
-/* Text styles */
 .tick {
   font-family: 'Georgia', serif;
   font-size: 20px;
-  color: #ffffff;
+  color: #3b3e15;
   padding: 20px;
 }
 
-/* Animation effects */
 @keyframes fade-in {
   from { opacity: 0; }
   to { opacity: 1; }

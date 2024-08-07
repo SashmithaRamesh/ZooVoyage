@@ -2,69 +2,79 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background: url('') no-repeat center center/cover;
   }
+
+.reg-close-button {
+  position: absolute;
+  top: 70px;
+  right: 560px;
+  font-size: 26px;
+  cursor: pointer;
+  color: white;
+}
   
   .register-form {
-    padding: 20px;
+    padding: 38px;
     border-radius: 8px;
-    box-shadow: 0 0 10px #4A0A1A;
-    background-color: white;
-    width: 100%;
-    max-width: 400px;
+    box-shadow: 0 0 10px #3b3e15;
+    background: linear-gradient( #B69E4A,#3b3e15);
   }
   
   .register-form h2 {
-    margin-bottom: 20px;
+    margin-bottom: 22px;
     font-size: 22px;
-    color: #4A0A1A;
+    color: white;
     text-align: center;
   }
 
   .register-form ::placeholder{
-    color: #a53860;
+    color: rgb(215, 207, 207);
   }
   
-  .form-group {
+  .reg-form-group {
     margin-bottom: 15px;
   }
   
-  .form-group label {
+  .reg-form-group label {
     display: block;
     margin-bottom: 5px;
     background-color: #4A0A1A;
   }
   
-  .form-group input {
+  .reg-form-group input {
     width: 100%;
     padding: 10px;
+    max-width: 260px;
     border-radius: 15px;
     font-size: 16px;
-    max-width: 260px;
-    border: 1px solid #4A0A1A;
-    margin-left: 55px;
+    justify-content: center;
+    background-color: transparent;
+    color: white;
   }
 
-  .form-group input:focus {
-    border-color: #a53860;
+  .reg-form-group input:hover{
+    border-color: #3b3e15;
+  }
+
+  .reg-form-group input:focus {
+    border-color: #B69E4A;
     outline: none;
   }
   
   .register-button {
     width: 40%;
     padding: 10px;
-    background-color: #4A0A1A;
-    color: #e6e3e3;
+    color: white;
+    background-color: #3b3e15;
     border: none;
     border-radius: 10px;
     font-size: 16px;
     cursor: pointer;
-    margin-left: 110px;
+    justify-content: center;
   }
   
   .register-button:hover {
-    background-color: #a53860;
+    background-color: #B69E4A;
   }
   
   .login-link {
@@ -73,7 +83,7 @@
   }
   
   .login-link a {
-    color: black;
+    color: #B69E4A;
     text-decoration: none;
   }
   

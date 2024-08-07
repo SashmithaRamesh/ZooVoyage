@@ -90,20 +90,20 @@
 }
 
 .clear-cart {
-  background-color: #a53860;
+  background-color: #3b3e15;
 }
 
 .clear-cart:hover {
-  background-color: #ea8097;
+  background-color: #B69E4A;
   transform: scale(1.05); /* Slightly enlarge button on hover */
 }
 
 .pay-button {
-  background-color: #4A90E2;
+  background-color: #f3e4af;
 }
 
 .pay-button:hover {
-  background-color: #357ABD;
+  background-color: #f3e4af;
   transform: scale(1.05); /* Slightly enlarge button on hover */
 }
 

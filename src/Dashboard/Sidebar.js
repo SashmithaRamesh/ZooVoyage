@@ -1,17 +1,15 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import Grid from '@mui/material/Grid';
-import Stack from '@mui/material/Stack';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
-import Link from '@mui/material/Link';
 
 function Sidebar(props) {
-  const {description, social, title } = props;
+  const {description, title } = props;
 
   return (
     <Grid item xs={1} md={13} >
-      <Paper elevation={9} sx={{ p: { xs: 3, md: 6 }, bgcolor: '#EC9836' }}>
+      <Paper elevation={9} sx={{ p: { xs: 3, md: 6 }, bgcolor: '#f5a142' }}>
         <Typography variant="h6" gutterBottom >
           Upload your Vlogs
         </Typography>
@@ -19,20 +17,7 @@ function Sidebar(props) {
           {title}
         </Typography>
         <Typography>{description}
-      {social.map((network) => (
-        <Link
-        display="block"
-        variant="body1"
-        href="#"
-        key={network.name}
-        sx={{ mb: 0.1 }}
-        >
-          <Stack direction="row" spacing={1} alignItems="center">
-            <network.icon />
-            <span>{network.name}</span>
-          </Stack>
-        </Link>
-      ))}
+      
       </Typography>
       </Paper>
     </Grid>

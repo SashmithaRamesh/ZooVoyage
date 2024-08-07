@@ -121,7 +121,7 @@ function ZooLocation() {
           </Box>
 
           <ButtonGroup>
-            <Button backgroundColor='#a53860' type='submit' onClick={calculateRoute} color={'white'} _hover={'#ea8097'}>
+            <Button backgroundColor='#3b3e15' type='submit' onClick={calculateRoute} color={'white'} _hover={'#B69E4A'}>
               Calculate Route
             </Button>
             <IconButton

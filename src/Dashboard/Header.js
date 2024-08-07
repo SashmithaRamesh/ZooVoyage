@@ -6,26 +6,14 @@ import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
 import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
+import './Blog.css';
 
 function Header(props) {
-  const { sections, onLoginClick, onRegisterClick } = props;
+  const { sections, onProfileClick} = props;
 
   return (
     <React.Fragment>
       <Toolbar sx={{ borderBottom: 1, borderColor: 'divider', backgroundColor: '#3b3e15' }}>
-        <Link to='/profile' style={{ textDecoration: 'none' }}>
-          <Button
-            sx={{
-              color: 'white',
-              '&:hover': {
-                color: 'white',
-                backgroundColor: '#B69E4A',
-              },
-            }}
-          >
-            Profile
-          </Button>
-        </Link>
         <Typography
           component="h2"
           variant="h5"
@@ -39,33 +27,22 @@ function Header(props) {
         <IconButton>
           <SearchIcon sx={{ color: 'white' }} />
         </IconButton>
-        <Button
-          sx={{
-            color: 'white',
-            '&:hover': {
-              color: 'white',
-              backgroundColor: '#B69E4A',
-            },
-          }}
-          onClick={onLoginClick} 
-        >
-          Login
-        </Button>
-        &nbsp;&nbsp;
-        <Button
+        <Link to='/profile'><Button
           sx={{
             color: 'white',
             border: '1px solid white',
             '&:hover': {
               color: 'white',
               backgroundColor: '#B69E4A',
-              border: '#B69E4A'
+              border: '1px solid #B69E4A',
             },
           }}
-          onClick={onRegisterClick} 
+          onClick={onProfileClick} // Call onProfileClick when Profile button is clicked
         >
-          Sign up
+          Profile
         </Button>
+        </Link>
+        
       </Toolbar>
       <Toolbar
         component="nav"
@@ -94,8 +71,7 @@ Header.propTypes = {
       url: PropTypes.string.isRequired,
     })
   ).isRequired,
-  onLoginClick: PropTypes.func.isRequired,
-  onRegisterClick: PropTypes.func.isRequired,
+  onProfileClick: PropTypes.func.isRequired, // Add prop type for onProfileClick
 };
 
 export default Header;

@@ -1,11 +1,9 @@
 import React, { useState, useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { UserContext } from './UserContext';
 import './Register.css';
 
-const Register = ({ onLoginClick }) => {
-  const navigate = useNavigate();
+const Register = ({ onLoginClick, onClose }) => {
   const [confirm, setConfirm] = useState('');
   const [signupDetails, setSignupDetails] = useState({
     username: '',
@@ -38,8 +36,9 @@ const Register = ({ onLoginClick }) => {
       .post('http://localhost:8080/insert', signupDetails)
       .then((response) => {
         console.log('Signup successful:', response.data);
-        setUser(response.data); // Set user details in context
-        navigate('/'); // Redirect to profile page after successful registration
+        setUser(response.data); 
+        alert('Registered successfully');
+        window.location.href='/home'
       })
       .catch((error) => {
         console.error('Signup error:', error);
@@ -56,9 +55,10 @@ const Register = ({ onLoginClick }) => {
 
   return (
     <div className="register-container">
+      <span className="reg-close-button" onClick={onClose}>&times;</span>
       <form onSubmit={handleRegister} className="register-form">
         <h2>REGISTER</h2>
-        <div className="form-group">
+        <div className="reg-form-group">
           <input
             placeholder="username"
             type="text"
@@ -69,7 +69,7 @@ const Register = ({ onLoginClick }) => {
             required
           />
         </div>
-        <div className="form-group">
+        <div className="reg-form-group">
           <input
             placeholder="mobile number"
             type="tel"
@@ -80,7 +80,7 @@ const Register = ({ onLoginClick }) => {
             required
           />
         </div>
-        <div className="form-group">
+        <div className="reg-form-group">
           <input
             placeholder="e-mail"
             type="email"
@@ -90,7 +90,7 @@ const Register = ({ onLoginClick }) => {
             required
           />
         </div>
-        <div className="form-group">
+        <div className="reg-form-group">
           <input
             placeholder="password"
             type="password"
@@ -100,7 +100,7 @@ const Register = ({ onLoginClick }) => {
             required
           />
         </div>
-        <div className="form-group">
+        <div className="reg-form-group">
           <input
             placeholder="confirm password"
             type="password"
@@ -114,11 +114,10 @@ const Register = ({ onLoginClick }) => {
           Register
         </button></h6>
         <div className="login-link">
-          <h6 className='z'><b>Already have an account? </b><span onClick={onLoginClick} style={{cursor: 'pointer', color: 'blue'}}>Login here</span></h6>
+          <h6 className='z'>Already have an account? <span onClick={onLoginClick} style={{cursor: 'pointer', color: '#B69E4A'}}>Login here</span></h6>
         </div>
       </form>
     </div>
   );
 };
-
 export default Register;

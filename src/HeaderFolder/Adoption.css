@@ -1,7 +1,7 @@
 .container-adopt {
     width: 100%;
     padding: 20px;
-    background-color: #f3f1e7; /* Light, natural background color */
+    background-color: #f6e9a2; 
     text-align: center;
     max-width: 1200px;
     margin: auto;
@@ -9,10 +9,10 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-h1 {
-    margin-bottom: 20px;
-    color: #2d5d34; /* Dark green color */
-    font-size: 2.5em;
+.adopt{
+    margin-bottom: 10px;
+    color: #2d5d34; 
+    font-size: 21px;
     font-weight: bold;
 }
 
@@ -22,11 +22,10 @@ h1 {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background-color: #f9f9f9;
-    border: 2px solid #ddd;
+    background-color: #f6e9a2;
     border-radius: 15px;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding-top: 5px;
     width: 100%;
     height: 600px; /* Adjust the height as needed */
 }
@@ -34,7 +33,7 @@ h1 {
 .image-card-adopt {
     position: absolute;
     text-align: center;
-    background-color: #f3f1e7;
+    background-color: #fbf2bf;
     border-radius: 10px;
     overflow: hidden;
     width: 90%;
@@ -86,7 +85,7 @@ h1 {
 
 .buttons {
     position: absolute;
-    bottom: 20px;
+    bottom:20px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -96,7 +95,7 @@ h1 {
 .view-button,
 .adopt-button {
     padding: 12px 25px;
-    background-color: #4CAF50;
+    background-color: #C36B1C;
     color: white;
     border: none;
     border-radius: 5px;
@@ -107,14 +106,14 @@ h1 {
 
 .view-button:hover,
 .adopt-button:hover {
-    background-color: #388e3c;
+    background-color: #EC9836;
     transform: scale(1.05);
 }
 
 .adopt-button {
-    background-color: #f44336;
+    background-color:#FF8101 ;
 }
 
 .adopt-button:hover {
-    background-color: #d32f2f;
+    background-color: #EC9836;
 }

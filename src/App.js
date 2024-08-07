@@ -1,13 +1,11 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
-import Login from './FirstPage/Login';
-import Register from './FirstPage/Register';
 import Blog from './Dashboard/Blog';
 import AboutUs from './HeaderFolder/AboutUs';
 import Publication from './HeaderFolder/Adoption';
 import Report from './HeaderFolder/Report';
-import NearbyResort from './HeaderFolder/NearbyResort';
+import Resort from './HeaderFolder/Resort';
 import ZooEvents from './HeaderFolder/ZooEvents';
 import ZooDonation from './Donation/ZooDonation';
 import ZooLocation from './Location/ZooLocation';
@@ -21,6 +19,7 @@ import Cart from './ZooTicket/Cart';
 import PaymentPage from './ZooTicket/PaymentPage';
 import { CartProvider } from './ZooTicket/CartContext';
 import Adoption from './HeaderFolder/Adoption';
+import GetStarted from './Dashboard/GetStarted';
 
 
 function App() {
@@ -31,13 +30,13 @@ function App() {
           <div className="App">
             <BrowserRouter>
               <Routes>
-                <Route path='/' element={<Blog />} />
-                <Route path='/login' element={<Login />} />
-                <Route path='/register' element={<Register />} />
+                <Route path='/' element={<GetStarted/>}/>
+                <Route path='/home' element={<Blog/>}/>
+                <Route path='/profile' element={<Profile/>}/>
                 <Route path='/about' element={<AboutUs />} />
                 <Route path='/publication' element={<Publication />} />
                 <Route path='/report' element={<Report />} />
-                <Route path='/resort' element={<NearbyResort />} />
+                <Route path='/resort' element={<Resort />} />
                 <Route path='/events' element={<ZooEvents />} />
                 <Route path='/donation' element={<ZooDonation />} />
                 <Route path='/location' element={<ZooLocation />} />

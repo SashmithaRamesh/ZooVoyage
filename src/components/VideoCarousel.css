@@ -5,8 +5,8 @@
 }
 
 .hed {
-  color: #4A0A1A;
-  background-color: #faccb7;
+  color: white;
+  background-color: #3b3e15;
   text-align: center;
 }
 
@@ -15,7 +15,7 @@
   display: flex;
   align-items: center;
   padding: 2rem;
-  background-color: #f6e2cb;
+  background-color: #eedc9c;
 }
 
 .carousel-con {
@@ -39,10 +39,10 @@
 }
 
 .footer {
-  color: #4A0A1A;
-  background-color: #faccb7;
+  color: #363811;
+  background-color: #B69E4A;
   text-align: center;
-  padding: 0.9rem 0;
+  padding: 40px;
   position: relative;
   bottom: 0;
   width: 100%;
@@ -54,7 +54,7 @@
 
 .tabheading{
   margin-left: 160px;
-  color: #a53860;
+  color: #3b3e15;
   font-size: 1.15em;
 }
 
@@ -65,7 +65,7 @@
 .but{
   width: 115px;
   height: 33px;
-  background-color: #a53860;
+  background-color: #3b3e15;
   color: white;
   border-radius: 10px;
   font-size: 16px;
@@ -73,6 +73,5 @@
 }
 
 .but:hover{
-  background-color: #ce4257;
-  border-color: #DA627D;
+  background-color: #B69E4A;  
 }

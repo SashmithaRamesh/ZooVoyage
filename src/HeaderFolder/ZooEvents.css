@@ -21,24 +21,23 @@
   }
 }
 
-/* Page Container */
 .events-page {
-  background-color: #e0ffe5; /* Light green to match a zoo/nature theme */
+  background-color: #fbf2bf; 
   max-width: 100%;
   margin: 0 auto;
   padding: 20px;
 }
 
-/* Title */
+
 .page-title {
   text-align: center;
   margin-bottom: 20px;
-  color: #2a6f33; /* Dark green for a natural look */
-  font-size: 2em;
+  color: #3b3e15;
+  font-size: 23px;
   animation: flyIn 1s ease-out;
 }
 
-/* Events Container */
+
 .events-container {
   display: flex;
   flex-direction: column;
@@ -49,9 +48,9 @@
   animation: spreadIn 1.2s ease-out;
 }
 
-/* Individual Event Card */
+
 .event-card {
-  background: #c7e6b2; /* Softer green shade */
+  background: #f6e9a2; 
   border-radius: 8px;
   box-shadow: 0 0 15px rgba(42, 111, 51, 0.3);
   padding: 20px;
@@ -59,21 +58,21 @@
   animation: spreadIn 0.8s ease-out;
 }
 
-/* Event Title */
+
 .event-title {
-  font-size: 1.5em;
-  color: #2a6f33; /* Dark green */
+  font-size: 20px;
+  color: #3b3e15; 
   margin-bottom: 10px;
 }
 
-/* Event Description */
+
 .event-description {
   font-size: 1.2em;
   color: #3d3d3d;
   margin-bottom: 15px;
 }
 
-/* Media (Image and Video) */
+
 .event-media {
   display: flex;
   justify-content: space-between;
@@ -81,7 +80,7 @@
   align-items: center;
 }
 
-/* Event Image */
+
 .event-image {
   width: 45%;
   height: auto;
@@ -93,7 +92,7 @@
   transform: scale(1.05);
 }
 
-/* Event Video */
+
 .event-video {
   width: 45%;
   height: 270px;
