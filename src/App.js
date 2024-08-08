@@ -12,6 +12,8 @@ import ZooLocation from './Location/ZooLocation';
 import { ChakraProvider, theme } from '@chakra-ui/react';
 import VideoCarousel from './components/VideoCarousel';
 import { UserProvider } from './FirstPage/UserContext';
+import Login from './FirstPage/Login';
+import Register from './FirstPage/Register';
 import Profile from './FirstPage/Profile';
 import Booking from './ZooTicket/Booking';
 import BookingForm from './ZooTicket/BookingForm';
@@ -20,6 +22,7 @@ import PaymentPage from './ZooTicket/PaymentPage';
 import { CartProvider } from './ZooTicket/CartContext';
 import Adoption from './HeaderFolder/Adoption';
 import GetStarted from './Dashboard/GetStarted';
+//import { Login } from '@mui/icons-material';
 
 
 function App() {
@@ -32,6 +35,8 @@ function App() {
               <Routes>
                 <Route path='/' element={<GetStarted/>}/>
                 <Route path='/home' element={<Blog/>}/>
+                <Route path='/login' element={<Login/>}/>
+                <Route path='/register' element={<Register/>}/>
                 <Route path='/profile' element={<Profile/>}/>
                 <Route path='/about' element={<AboutUs />} />
                 <Route path='/publication' element={<Publication />} />

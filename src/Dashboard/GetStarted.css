@@ -102,9 +102,9 @@
   .get-zoovoyage{
     text-align: center;
     color: white;
-    padding-right: 420px;
+    padding-right: 480px;
     font-size: 20px;
-    margin-bottom: 7px;
+    margin-bottom: 5px;
   }
 
   .wel{
@@ -113,3 +113,17 @@
     font-size: 22px;
     font-weight: bold;
   }
+
+  .get-logo {
+    height: 50px; 
+    margin-right: 535px;
+  }
+  
+  .get-container.modal-open {
+    pointer-events: none; /* Disable interactions with background elements */
+  }
+  
+  .get-container.modal-open * {
+    pointer-events: auto; /* Allow interaction with the modal */
+  }
+  

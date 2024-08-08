@@ -1,9 +1,12 @@
 import React, { useState, useEffect, useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { UserContext } from './UserContext';
 import './Login.css';
 
-const Login = ({ onRegisterClick, onClose }) => {
+const Login = ({ onClose }) => {
+
+  const navigate = useNavigate();
   const [users, setUsers] = useState([]);
   const [loginDetails, setLoginDetails] = useState({
     email: '',
@@ -23,11 +26,10 @@ const Login = ({ onRegisterClick, onClose }) => {
 
     if (foundUser) {
       setUser(foundUser);
-      alert('Logged in successfully');
-      window.location.href='/home'
+      navigate('/home');
     } else {
       alert('Account not found. Please register.');
-      onRegisterClick(); 
+      navigate('/register');
     }
   };
 
@@ -38,10 +40,9 @@ const Login = ({ onRegisterClick, onClose }) => {
   return (
     <div className="login-container">
       <form onSubmit={handleLogin} className="login-form">
-        <span className="log-close-button" onClick={onClose}>&times;</span>
-        <br></br>
+        <span className="log-close-button" onClick={onClose}>&times;</span> {/* Close button */}
         <h2>LOGIN</h2>
-        <div className="form-group">
+        <div className="log-form-group">
           <input 
             placeholder='e-mail'
             type="email" 
@@ -51,7 +52,7 @@ const Login = ({ onRegisterClick, onClose }) => {
             required 
           />
         </div>
-        <div className="form-group">
+        <div className="log-form-group">
           <input 
             placeholder='password'
             type="password" 
@@ -62,13 +63,14 @@ const Login = ({ onRegisterClick, onClose }) => {
           />
         </div>
         <button type="submit" className="login-button">Login</button>
-        
         <div className="register-link">
-          <span className='z'>New User ? </span>
-          <span onClick={onRegisterClick} style={{cursor: 'pointer', color: '#B69E4A'}}>&nbsp;Register here</span>
+        <button type="submit" className="login-button">register</button>
+        
         </div>
       </form>
+
     </div>
   );
 };
+
 export default Login;

@@ -128,7 +128,7 @@ export default function Blog() {
 */
 
 
-import React, { useState } from 'react';
+import React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
@@ -138,7 +138,6 @@ import MainFeaturedPost from './MainFeaturedPost';
 import FeaturedPost from './FeaturedPost';
 import Sidebar from './Sidebar';
 import Footer from './Footer';
-import Profile from '../FirstPage/Profile';
 import './Blog.css';
 
 const sections = [
@@ -192,11 +191,11 @@ const customTheme = createTheme({
 });
 
 export default function Blog() {
-  const [currentView, setCurrentView] = useState('home'); 
+  /*const [currentView, setCurrentView] = useState('home'); 
 
   const handleProfileClick = () => {
     setCurrentView(false);
-  }
+  }*/
 
 
   return (
@@ -205,11 +204,9 @@ export default function Blog() {
       <Container maxWidth="xl">
         <Header 
           sections={sections} 
-          onProfileClick={handleProfileClick} 
         />
 
-        {currentView === 'home' ? (
-          <>
+        
             <MainFeaturedPost post={mainFeaturedPost} />
             <Grid container spacing={4}>
               {featuredPosts.map((post) => (
@@ -222,10 +219,6 @@ export default function Blog() {
                 description={sidebar.description}
               />
             </Grid>
-          </>
-        ) : (
-          <Profile/>
-        )}
       </Container>
       <br></br>
       <Footer />

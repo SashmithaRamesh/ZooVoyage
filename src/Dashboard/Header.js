@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 import './Blog.css';
 
 function Header(props) {
-  const { sections, onProfileClick} = props;
+  const { sections} = props;
 
   return (
     <React.Fragment>
@@ -37,7 +37,7 @@ function Header(props) {
               border: '1px solid #B69E4A',
             },
           }}
-          onClick={onProfileClick} // Call onProfileClick when Profile button is clicked
+          //onClick={onProfileClick} // Call onProfileClick when Profile button is clicked
         >
           Profile
         </Button>
@@ -70,8 +70,8 @@ Header.propTypes = {
       title: PropTypes.string.isRequired,
       url: PropTypes.string.isRequired,
     })
-  ).isRequired,
-  onProfileClick: PropTypes.func.isRequired, // Add prop type for onProfileClick
+  )//.isRequired,
+  //onProfileClick: PropTypes.func.isRequired, // Add prop type for onProfileClick
 };
 
 export default Header;
