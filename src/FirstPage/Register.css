@@ -8,68 +8,74 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10000; /* Ensure this is higher than other content */
+  z-index: 10000; 
 }
 
-
 .register-form {
-  background: rgba(255, 255, 255, 0.9); /* White background for form */
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  padding: 20px;
-  width: 300px;
+  padding:20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #3b3e15;
+  background: linear-gradient( #B69E4A,#3b3e15);
+  width: 350px;
+  height: 480px;
   animation: scaleUp 0.5s ease-in-out;
 }
 
 .reg-close-button {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 24px;
+  top: 80px;
+  right: 540px;
+  font-size: 26px;
   cursor: pointer;
-  color: #333;
+  color: white;
 }
 
 .register-form h2 {
   margin-bottom: 20px;
-  color: #333; /* Dark grey text */
-  font-size: 24px;
+  font-size: 22px;
+  color: white;
+  text-align: center;
 }
 
-.form-group {
+.reg-form-group {
   margin-bottom: 15px;
 }
 
-.form-group input {
+.register-form ::placeholder{
+  color: rgb(215, 207, 207);
+}
+
+.reg-form-group input {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
+  max-width: 255px;
+  border-radius: 15px;
   font-size: 16px;
+  justify-content: center;
+  background-color: transparent;
+  color: white;
   transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-.form-group input:focus {
-  border-color: #888; /* Darker grey border on focus */
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+.reg-form-group input:focus {
+  border-color: #B69E4A;
   outline: none;
 }
 
 .register-button {
-  background-color: #4a4a4a; /* Dark grey background */
-  color: #ffffff;
-  border: none;
+  width: 40%;
   padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
+  color: white;
+  background-color: #3b3e15;
+  border: none;
+  border-radius: 10px;
   font-size: 16px;
-  width: 100%;
+  cursor: pointer;
+  justify-content: center;
   transition: background-color 0.3s, transform 0.3s;
 }
 
 .register-button:hover {
-  background-color: #6e6e6e; /* Lighter grey on hover */
+  background-color: #B69E4A;
   transform: scale(1.05);
 }
 
@@ -78,12 +84,15 @@
   margin-top: 20px;
 }
 
-.login-link a {
-  color: #4a4a4a;
+.login-link span {
   text-decoration: none;
-  font-weight: bold;
 }
 
 .login-link a:hover {
-  color: #333; /* Darker grey on hover */
+  text-decoration: underline;
+}
+
+.z{
+  font-size: 15px;
+  color: white;
 }

@@ -1,67 +1,3 @@
-/*import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-
-const Profile = () => {
-  const [user, setUser] = useState(null); // Store the user data
-  const [editedUser, setEditedUser] = useState({}); // Store the edited data
-
-  useEffect(() => {
-    const fetchUser = async () => {
-      try {
-        const response = await axios.get(`http://localhost:8080/get/${user.id}`);
-        setUser(response.data);
-        setEditedUser(response.data); // Initialize editedUser with fetched data
-      } catch (error) {
-        console.error('Error fetching user:', error);
-      }
-    };
-
-    fetchUser();
-  }, [user.id]);
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setEditedUser({ ...editedUser, [name]: value });
-  };
-
-  const saveChanges = async () => {
-    if (!user) {
-      alert('User data is not loaded yet.');
-      return;
-    }
-  
-    try {
-      const response = await axios.put(`http://localhost:8080/update/${user.id}`, editedUser);
-      setUser(response.data);
-      alert('Changes saved successfully!');
-      window.location.href = '/';
-    } catch (error) {
-      console.error('Error saving changes:', error);
-      alert('Failed to save changes. Please try again later.');
-    }
-  };
-  
-
-  if (!user) return <div>Loading...</div>;
-
-  return (
-    <div>
-      <input
-        type="text"
-        name="name"
-        value={editedUser.name || ''}
-        onChange={handleInputChange}
-      />
-      
-      <button onClick={saveChanges}>Save Changes</button>
-    </div>
-  );
-};
-
-export default Profile;
-*/
-
-
 import React, { useState, useContext } from 'react';
 import {  useNavigate } from 'react-router-dom';
 
@@ -82,7 +18,7 @@ const Profile = () => {
   const saveChanges = async () => {
     try {
       const response = await axios.put(`http://localhost:8080/update/${user.id}`, editedUser);
-      setUser(response.data); // Assuming the response contains updated user data
+      setUser(response.data); 
       alert('Changes saved successfully!');
       navigate('/home');
     } catch (error) {
@@ -116,7 +52,6 @@ const Profile = () => {
               <td><b className='col'>Password:</b></td>
               <td><input type="password" name="password" value={editedUser.password} onChange={handleInputChange} /></td>
             </tr>
-            {/* Add other fields as needed */}
             <tr>
               <td colSpan="2" style={{ textAlign: 'center' }}>
                 <button onClick={saveChanges}>Save Changes</button>

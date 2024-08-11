@@ -7,7 +7,7 @@ const Booking = () => {
   useEffect(() => {
     const ticketOptions = document.querySelectorAll('.ticket-option');
     ticketOptions.forEach((option, index) => {
-      option.style.animationDelay = `${index * 0.5}s`; // Delay each option by 0.5s
+      option.style.animationDelay = `${index * 0.5}s`;
       option.classList.add('roll-in');
     });
   }, []);

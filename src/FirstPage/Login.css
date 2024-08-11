@@ -3,36 +3,41 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.7); /* Dark transparent overlay */
-  position: fixed; /* Keeps the login container fixed over the GetStarted page */
+  background-color: rgba(0, 0, 0, 0.7); 
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 9999; /* Keeps the login container above other elements */
+  z-index: 9999; 
 }
 
 .login-form {
-  background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-  padding: 20px;
-  width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #3b3e15;
+  background: linear-gradient( #B69E4A,#3b3e15);
+  width: 350px;
+  height: 330px;
   animation: scaleUp 0.5s ease-in-out;
 }
 
 .log-close-button {
   position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 18px;
+  top: 155px;
+  right: 540px;
+  font-size: 26px;
   cursor: pointer;
-  color: #333;
+  color: white;
 }
 
 .login-form h2 {
   margin-bottom: 20px;
-  color: #333;
-  font-size: 24px;
+  font-size: 22px;
+  color: white;
+  text-align: center;
+}
+
+.login-form ::placeholder{
+  color: rgb(215, 207, 207);
 }
 
 .log-form-group {
@@ -41,50 +46,54 @@
 
 .log-form-group input {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
+  max-width: 255px;
+  border-radius: 15px;
   font-size: 16px;
+  justify-content: center;
+  background-color: transparent;
+  color: white;
   transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .log-form-group input:focus {
-  border-color: #888;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  border-color: #B69E4A;
   outline: none;
 }
 
 .login-button {
-  background-color: #4a4a4a;
-  color: #ffffff;
-  border: none;
+  width: 40%;
   padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
+  color: white;
+  background-color: #3b3e15;
+  border: none;
+  border-radius: 10px;
   font-size: 16px;
-  width: 100%;
+  cursor: pointer;
+  justify-content: center;
   transition: background-color 0.3s, transform 0.3s;
 }
 
 .login-button:hover {
-  background-color: #6e6e6e;
+  background-color: #B69E4A;
   transform: scale(1.05);
 }
 
-.register-link, .login-link {
+.register-link {
+  margin-top: 10px;
   text-align: center;
-  margin-top: 20px;
 }
 
-.register-link a, .login-link a {
-  color: #4a4a4a;
+.register-link span {
   text-decoration: none;
-  font-weight: bold;
 }
 
-.register-link a:hover, .login-link a:hover {
-  color: #333;
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+.z{
+  font-size: 15px;
+  color: white;
 }
 
 /* Keyframes */

@@ -4,8 +4,7 @@ import axios from 'axios';
 import { UserContext } from './UserContext';
 import './Login.css';
 
-const Login = ({ onClose }) => {
-
+const Login = ({ onClose, onRegisterClick }) => { 
   const navigate = useNavigate();
   const [users, setUsers] = useState([]);
   const [loginDetails, setLoginDetails] = useState({
@@ -29,7 +28,8 @@ const Login = ({ onClose }) => {
       navigate('/home');
     } else {
       alert('Account not found. Please register.');
-      navigate('/register');
+      onClose();
+      onRegisterClick();
     }
   };
 
@@ -37,10 +37,16 @@ const Login = ({ onClose }) => {
     setLoginDetails({ ...loginDetails, [e.target.name]: e.target.value });
   };
 
+  const handleRegisterClick = () => {
+    onClose(); 
+    onRegisterClick();
+  };
+
   return (
     <div className="login-container">
       <form onSubmit={handleLogin} className="login-form">
-        <span className="log-close-button" onClick={onClose}>&times;</span> {/* Close button */}
+        <span className="log-close-button" onClick={onClose}>&times;</span> 
+        <br></br>
         <h2>LOGIN</h2>
         <div className="log-form-group">
           <input 
@@ -62,13 +68,13 @@ const Login = ({ onClose }) => {
             required 
           />
         </div>
+        <br></br>
         <button type="submit" className="login-button">Login</button>
         <div className="register-link">
-        <button type="submit" className="login-button">register</button>
-        
+          <span className='z'>New User ? </span>
+          <span onClick={handleRegisterClick} style={{cursor: 'pointer', color: '#B69E4A'}}>&nbsp;Register here</span>
         </div>
       </form>
-
     </div>
   );
 };
