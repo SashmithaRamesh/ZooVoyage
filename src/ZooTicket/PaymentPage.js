@@ -42,11 +42,11 @@ function PaymentPage() {
       }
       // Navigate to confirmation or perform any necessary actions
       alert(`UPI Payment Initiated for UPI ID: ${upiId}`);
-      navigate('/confirmation');
+      navigate('/home');
     } else {
       alert(`Payment successful using ${paymentMethod}`);
       console.log('Card Details:', cardDetails);
-      navigate('/confirmation');
+      navigate('/home');
     }
   };
 

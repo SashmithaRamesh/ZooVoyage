@@ -1,41 +1,76 @@
 .resort-container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: #f0f4f7;
-  }
-  
-  .resort-header {
-    background-color: #004d40;
-    padding: 20px;
-  }
-  
-  .resort-main {
-    flex: 1;
-    padding: 20px;
-  }
-  
-  .resort-search {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-  }
-  
-  .resort-search-button {
-    margin-top: 10px;
-  }
-  
-  .resort-recommendations {
-    margin-top: 20px;
-  }
-  
-  .resort-card {
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .resort-view-more {
-    margin-top: 10px;
-  }
-  
+  background-color: #f9f2cd;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 100vh;
+}
+
+.resort-box {
+  max-height: fit-content;
+  padding-bottom: 170px;
+}
+
+.search-resort {
+  color: #3b3e15;
+  font-weight: 600; 
+}
+
+.select-sanctuary{
+  color: #3b3e15;
+}
+
+.search-container .MuiTextField-root {
+  background-color: white;
+  border-radius: 4px;
+}
+
+.default-carousel{
+  padding-bottom: 250px;
+  height: 378px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.default-carousel img{
+  width: 100%;
+  height: 378px;
+  object-fit: cover;
+}
+
+.resort-carousel{
+  height: 200px;
+}
+
+.resort-carousel img{
+  margin-top: 15px;
+  width: 310px;
+  height: 240px; 
+  margin-left: 31px;
+}
+
+.resort-card {
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.resort-card:hover {
+  transform: scale(1.05);
+}
+
+.view-more-button {
+  margin-top: 12px;
+  background-color: #3b3e15;
+  color: white;
+  font-weight: 600;
+  text-transform: none;
+}
+
+.view-more-button:hover{
+  background-color: #B69E4A;
+}

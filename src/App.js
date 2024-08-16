@@ -8,7 +8,6 @@ import Report from './HeaderFolder/Report';
 import Resort from './HeaderFolder/Resort';
 import ZooEvents from './HeaderFolder/ZooEvents';
 import ZooDonation from './Donation/ZooDonation';
-import ZooLocation from './Location/ZooLocation';
 import { ChakraProvider, theme } from '@chakra-ui/react';
 import VideoCarousel from './components/VideoCarousel';
 import { UserProvider } from './FirstPage/UserContext';
@@ -22,7 +21,11 @@ import PaymentPage from './ZooTicket/PaymentPage';
 import { CartProvider } from './ZooTicket/CartContext';
 import Adoption from './HeaderFolder/Adoption';
 import GetStarted from './Dashboard/GetStarted';
-//import { Login } from '@mui/icons-material';
+import WhatsAppBooking from './ZooTicket/WhatsAppBooking';
+import FirebaseImg from './FireBase/FirebaseImg';
+import Wchat from './ZooTicket/Wchat';
+import ResortBook from './HeaderFolder/ResortBook';
+import MapEmbed from './Location/MapEmbed';
 
 
 function App() {
@@ -42,16 +45,20 @@ function App() {
                 <Route path='/publication' element={<Publication />} />
                 <Route path='/report' element={<Report />} />
                 <Route path='/resort' element={<Resort />} />
+                <Route path="/resortbook" element={<ResortBook />} />
                 <Route path='/events' element={<ZooEvents />} />
                 <Route path='/donation' element={<ZooDonation />} />
-                <Route path='/location' element={<ZooLocation />} />
+                <Route path='/location' element={<MapEmbed />} />
                 <Route path='/video' element={<VideoCarousel />} />
                 <Route path='/profile' element={<Profile />} />
+                <Route path='/whatsapp' element={<WhatsAppBooking/>} />
+                <Route path='/wchat' element={<Wchat/>} /> 
                 <Route path='/booking' element={<Booking />} />
                 <Route path='/bookingform' element={<BookingForm />} />
                 <Route path='/cart' element={<Cart />} />
                 <Route path='/payment' element={<PaymentPage />} />
                 <Route path='/adoption' element={<Adoption />} />
+                <Route path='/vlog' element={<FirebaseImg/>} />
               </Routes>
             </BrowserRouter>
           </div>

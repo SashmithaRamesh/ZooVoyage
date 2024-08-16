@@ -50,8 +50,10 @@
   max-width: 255px;
   border-radius: 15px;
   font-size: 16px;
+  padding: 10px;
   justify-content: center;
   background-color: transparent;
+  border: 1px solid #ddd;
   color: white;
   transition: border-color 0.3s, box-shadow 0.3s;
 }

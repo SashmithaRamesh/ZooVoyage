@@ -26,11 +26,19 @@
     width: 100%;
     padding: 10px;
     border-radius: 4px;
-    color: rgb(244, 236, 236);
     margin-top: 20px;
     font-size: 16px;
     color: black;
     background-color: transparent;
+  }
+
+  .zoo-dropdown select{
+    border-color: white;
+  }
+
+  .zoo-dropdown:focus{
+    border-color: #888;
+    outline: none;
   }
 
   .close-button {

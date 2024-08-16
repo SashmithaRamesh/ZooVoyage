@@ -2,7 +2,7 @@
   font-family: 'Arial', sans-serif;
   padding: 0;
   box-sizing: border-box;
-  background-color: #f4f4f4;
+  background-color: #ecd688;
   text-align: center;
   padding: 35px;
 }
@@ -10,7 +10,7 @@
 .booking-page {
   max-width: 800px;
   padding: 30px;
-  background-color: #ffffff;
+  background-color: #f6eec2;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   margin: 0 auto;
@@ -35,70 +35,38 @@
   border-radius: 5px;
   cursor: pointer;
   max-width: 200px;
-  background-color: #fff;
+  background-color: #ecd688;
 }
 
 .booking-form {
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Space between form sections */
+  gap: 20px;
 }
 
-.ticket-category, .add-ons {
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 15px;
-  opacity: 0; /* Start as hidden for animation */
-  animation: rollIn 0.5s forwards; /* Apply roll-in animation */
+.booking-table, .addons-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
 }
 
-/* Roll-in animation */
-@keyframes rollIn {
-  from {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-.ticket-category:nth-child(1) {
-  animation-delay: 0.2s;
-}
-
-.ticket-category:nth-child(2) {
-  animation-delay: 0.4s;
-}
-
-.ticket-category:nth-child(3) {
-  animation-delay: 0.6s;
-}
-
-.ticket-category:nth-child(4) {
-  animation-delay: 0.8s;
-}
-
-.ticket-category:nth-child(5) {
-  animation-delay: 1s;
-}
-
-.ticket-category {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.ticket-category span {
-  font-size: 16px;
+.booking-table th, .addons-table th {
+  background-color: #ecd688;
   color: #333;
+  padding: 10px;
+  text-align: center;
+}
+
+.booking-table td, .addons-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
 }
 
 .quantity-control {
   display: flex;
   align-items: center;
+  padding-left: 110px;
 }
 
 .quantity-control button {
@@ -106,15 +74,15 @@
   font-size: 18px;
   border: 1px solid #ddd;
   border-radius: 5px;
-  background-color: #b0e57c; /* Light green for buttons */
+  background-color: #f6e9a2;
   color: #333;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
 }
 
 .quantity-control button:hover {
-  background-color: #8ccf2c; /* Darker green on hover */
-  transform: scale(1.05); /* Slightly larger on hover */
+  background-color: #d5c071;
+  transform: scale(1.05);
 }
 
 .quantity-control span {
@@ -122,37 +90,10 @@
   font-size: 18px;
 }
 
-.add-ons {
-  display: flex;
-  flex-direction: column;
-}
-
 .add-ons h6 {
   font-size: 1.2em;
   color: #444;
   margin-bottom: 10px;
-}
-
-.add-on {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 10px;
-  opacity: 0; /* Start as hidden for animation */
-  animation: fadeIn 0.5s forwards; /* Apply fade-in animation */
-}
-
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 .add-on input[type="checkbox"] {

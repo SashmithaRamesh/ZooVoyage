@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { UserContext } from '../FirstPage/UserContext';
 import './ZooDonation.css';
 
 const zoos = [
@@ -11,17 +12,18 @@ const zoos = [
 ];
 
 const ZooDonationion = () => {
+  const { user } = useContext(UserContext);
+
   const [zoo, setZoo] = useState('');
   const [purpose, setPurpose] = useState('');
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
+  const [contact, setPhone] = useState('');
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Redirect to payment page with state
-    navigate('/payment', { state: { zoo, purpose, name, email, phone } });
+    navigate('/payment', { state: { zoo, purpose, name, email, contact } });
   };
 
   return (
@@ -34,9 +36,9 @@ const ZooDonationion = () => {
       <div>
         <br></br>
       <form onSubmit={handleSubmit} className="donation-form">
-        <div className="form-group">
+        <div className="don-form-group">
          Select Zoo:
-          <select id="zoo" value={zoo} onChange={(e) => setZoo(e.target.value)} required>
+          <select id="zoo" value={zoo} onChange={(e) => setZoo(e.target.value)} required className='don-select'>
             <option value="" disabled>Select a zoo</option>
             {zoos.map((zooName, index) => (
               <option key={index} value={zooName}>{zooName}</option>
@@ -44,9 +46,10 @@ const ZooDonationion = () => {
           </select>
         </div>
 
-        <div className="form-group">
+        <div className="don-form-group">
           Purpose of Donation:<br></br>
           <textarea
+            className='don-textarea'
             id="purpose"
             value={purpose}
             onChange={(e) => setPurpose(e.target.value)}
@@ -55,37 +58,40 @@ const ZooDonationion = () => {
             ></textarea>
         </div>
 
-        <div className="form-group">
+        <div className="don-form-group">
           Donator's Name:<br></br>
           <input
+            className='don-input'
             type="text"
             id="name"
-            value={name}
+            value={user ? user.username : ''}
             onChange={(e) => setName(e.target.value)}
             required
             placeholder="Enter your name"
             />
         </div>
 
-        <div className="form-group">
+        <div className="don-form-group">
          Email:
          <br></br>
           <input
+            className='don-input'
             type="email"
             id="email"
-            value={email}
+            value={user ? user.email : ''}
             onChange={(e) => setEmail(e.target.value)}
             required
             placeholder="Enter your email"
             />
         </div>
 
-        <div className="form-group">
+        <div className="don-form-group">
           Phone Number:<br></br>
           <input
+            className='don-input'
             type="tel"
-            id="phone"
-            value={phone}
+            id="contact"
+            value={user ? user.contact : ''}
             onChange={(e) => setPhone(e.target.value)}
             required
             placeholder="Enter your phone number"

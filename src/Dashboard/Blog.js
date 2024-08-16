@@ -151,10 +151,10 @@ const sections = [
 
 const mainFeaturedPost = {
   title: 'Welcome To Zoo Voyage!',
-  description: "Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.",
+  description: "",
   image: 'https://e0.pxfuel.com/wallpapers/555/745/desktop-wallpaper-animals-lion-savannah-nature-background-for-android-lions-lion-lion-wild.jpg',
   imageText: 'main image description',
-  linkText: 'Continue reading…',
+  linkText: '',
 };
 
 const featuredPosts = [

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import PropTypes from 'prop-types';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
@@ -6,10 +6,12 @@ import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
 import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
+import { UserContext } from '../FirstPage/UserContext';
 import './Blog.css';
 
 function Header(props) {
   const { sections} = props;
+  const { user } = useContext(UserContext);
 
   return (
     <React.Fragment>
@@ -27,19 +29,24 @@ function Header(props) {
         <IconButton>
           <SearchIcon sx={{ color: 'white' }} />
         </IconButton>
-        <Link to='/profile'><Button
+        <Link to='/profile'>
+        <Button
           sx={{
+            fontWeight: 'bolder',
             color: 'white',
-            border: '1px solid white',
+            border: '1.5px solid white',
+            borderRadius: '50%',
+            width: '40px',  
+            height: '40px', 
+            minWidth: '40px', 
             '&:hover': {
               color: 'white',
               backgroundColor: '#B69E4A',
               border: '1px solid #B69E4A',
             },
           }}
-          //onClick={onProfileClick} // Call onProfileClick when Profile button is clicked
         >
-          Profile
+          {/*{user.username.charAt(0)}*/}
         </Button>
         </Link>
         

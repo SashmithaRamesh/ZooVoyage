@@ -17,7 +17,8 @@ function FeaturedPost(props) {
       <CardActionArea component="a" href="#">
         <Card sx={{ display: 'flex' , backgroundColor: '#EFDA66', '&:hover': {
         transform: 'scale(1.02)'}, }}>
-          <CardContent sx={{ flex: 1 }}>
+          <CardContent sx={{height: '250px', flex: 1 }}>
+            <br></br>
             <Typography component="h2" variant="h6" color="#450920">
               {post.title}
             </Typography>

@@ -1,6 +1,6 @@
 .cart {
   font-family: 'Arial', sans-serif;
-  background-color: #f4f4f4;
+  background-color: #ecd688;
   padding: 35px;
   box-sizing: border-box;
   text-align: center;
@@ -10,7 +10,7 @@
   max-width: 800px;
   margin: 0 auto;
   padding: 30px;
-  background-color: #ffffff;
+  background-color: #f6eec2;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   position: relative;
@@ -23,7 +23,7 @@
 }
 
 .cart-item {
-  background-color: #f9f9f9;
+  background-color: #f6eec2;
   border: 1px solid #ddd;
   border-radius: 5px;
   padding: 15px;
@@ -35,7 +35,7 @@
 .cart-item h2 {
   font-size: 18px;
   margin-bottom: 10px;
-  color: #4A0A1A;
+  color: #3b3e15;
 }
 
 .tickets, .add-ons {
@@ -52,12 +52,12 @@
 }
 
 .ticket-detail:hover, .add-on-detail:hover {
-  background-color: #e0f7fa; /* Light blue background on hover */
-  transform: translateX(10px); /* Slight shift on hover */
+  background-color: #ecd688; 
+  transform: translateX(10px); 
 }
 
 .item-total {
-  background-color: #f9f9f9;
+  background-color: #ecd688;
   border: 1px solid #ddd;
   border-radius: 5px;
   padding: 10px;
@@ -65,7 +65,7 @@
 }
 
 .cart-total {
-  background-color: #f9f9f9;
+  background-color: #ecd688;
   border: 1px solid #ddd;
   border-radius: 5px;
   padding: 15px;
@@ -75,7 +75,7 @@
 .cart-total h2 {
   font-size: 20px;
   font-weight: bold;
-  color: #4A0A1A;
+  color: #3b3e15;
 }
 
 .clear-cart, .pay-button {
@@ -95,7 +95,7 @@
 
 .clear-cart:hover {
   background-color: #B69E4A;
-  transform: scale(1.05); /* Slightly enlarge button on hover */
+  transform: scale(1.05); 
 }
 
 .pay-button {

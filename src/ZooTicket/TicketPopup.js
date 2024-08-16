@@ -27,7 +27,7 @@ const TicketPopup = ({ onClose }) => {
         <span className="close-button" onClick={onClose}>&times;</span>
         <Typography variant="h6" gutterBottom className='select-a-zoo'>SELECT  ZOO</Typography>
         <select value={selectedZoo} onChange={handleZooChange} className="zoo-dropdown">
-          <option value="" disabled color='rgb(215, 207, 207)'>Select Zoo</option>
+          <option value="" disabled >Select Zoo</option>
           {Object.keys(zoos).map((zoo, index) => (
             <option key={index} value={zoo}>{zoo}</option>
           ))}

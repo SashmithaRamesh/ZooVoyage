@@ -24,7 +24,7 @@ function BookingForm() {
   const { addTicketToCart } = useContext(CartContext);
   const navigate = useNavigate();
 
-  const today = new Date().toISOString().split('T')[0]; // Today's date in 'YYYY-MM-DD' format
+  const today = new Date().toISOString().split('T')[0];
 
   const handleTicketChange = (index, delta) => {
     const newTickets = [...tickets];
@@ -67,45 +67,70 @@ function BookingForm() {
 
   return (
     <div className='book'>
-    <div className="booking-page">
-      <p>BOOK YOUR TICKETS</p>
-      <div className="date-selector">
-        <input
-          type="date"
-          value={selectedDate}
-          min={today} // Ensures that past dates are not selectable
-          onChange={(e) => setSelectedDate(e.target.value)}
+      <div className="booking-page">
+        <p>BOOK YOUR TICKETS</p>
+        <div className="date-selector">
+          <input
+            type="date"
+            value={selectedDate}
+            min={today}
+            onChange={(e) => setSelectedDate(e.target.value)}
           />
-      </div>
-      <form className="booking-form" onSubmit={handleSubmit}>
-        {tickets.map((ticket, index) => (
-          <div key={ticket.name} className="ticket-category">
-            <span>{ticket.name}</span>
-            <span>{`₹${ticket.price}/ Person`}</span>
-            <div className="quantity-control">
-              <button type="button" onClick={() => handleTicketChange(index, -1)}>-</button>
-              <span>{ticket.quantity}</span>
-              <button type="button" onClick={() => handleTicketChange(index, 1)}>+</button>
-            </div>
-          </div>
-        ))}
-        <div className="add-ons">
-          <b><h6>ADD ONS</h6></b>
-          {addOns.map(addOn => (
-            <div key={addOn.name} className="add-on">
-              <input
-                type="checkbox"
-                id={addOn.name}
-                checked={selectedAddOns.includes(addOn)}
-                onChange={() => handleAddOnChange(addOn)}
-                />
-              <label htmlFor={addOn.name}>{addOn.name}</label>
-            </div>
-          ))}
         </div>
-        <button type="submit" className='add'>Next</button>
-      </form>
-    </div>
+        <form className="booking-form" onSubmit={handleSubmit}>
+          <table className="booking-table">
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Quantity</th>
+              </tr>
+            </thead>
+            <tbody>
+              {tickets.map((ticket, index) => (
+                <tr key={ticket.name}>
+                  <td>{ticket.name}</td>
+                  <td>{`₹${ticket.price}/ Person`}</td>
+                  <td>
+                    <div className="quantity-control">
+                      <button type="button" onClick={() => handleTicketChange(index, -1)}>-</button>
+                      <span>{ticket.quantity}</span>
+                      <button type="button" onClick={() => handleTicketChange(index, 1)}>+</button>
+                    </div>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <div className="add-ons">
+            <h6>ADD ONS</h6>
+            <table className="addons-table">
+              <thead>
+                <tr>
+                  <th>Add-on</th>
+                  <th>Select</th>
+                </tr>
+              </thead>
+              <tbody>
+                {addOns.map(addOn => (
+                  <tr key={addOn.name}>
+                    <td>{addOn.name}</td>
+                    <td>
+                      <input
+                        type="checkbox"
+                        id={addOn.name}
+                        checked={selectedAddOns.includes(addOn)}
+                        onChange={() => handleAddOnChange(addOn)}
+                      />
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <button type="submit" className='add'>Next</button>
+        </form>
+      </div>
     </div>
   );
 }

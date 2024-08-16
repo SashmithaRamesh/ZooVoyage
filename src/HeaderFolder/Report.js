@@ -1,27 +1,46 @@
-import React from 'react';
-import './Report.css';
+import React, { useContext } from 'react';
+import emailjs from 'emailjs-com';
 import Link from '@mui/material/Link';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import { keyframes } from '@mui/system';
+import './Report.css';
+import { UserContext } from '../FirstPage/UserContext';
 
 const Report = () => {
+  const { user } = useContext(UserContext); 
 
   const glitter = keyframes`
-  0%, 100% {
-    opacity: 12;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 1.6;
-    transform: scale(1.2);
-  }
-`;
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1.6;
+      transform: scale(1.2);
+    }
+  `;
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const SERVICE_ID = 'service_phidlmu';
+    const TEMPLATE_ID = 'template_mli653f';
+    const USER_ID = 'jwjWfj_bQStIvEkpo';
+
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
+      .then((result) => {
+        console.log(result.text);
+        alert('Message sent successfully!');
+      }, (error) => {
+        console.log(error.text);
+        alert('Failed to send message. Please try again.');
+      });
+  };
 
   return (
-    <div className="contact-container">
-
+    <div className="contact-container" onSubmit={handleSubmit}>
       <header className='head'>
         <h4 className="Z">REPORT</h4>
         <div className="email-form-group">
@@ -30,31 +49,37 @@ const Report = () => {
             id="toemail"
             className='toemail' 
             type="email" 
-            name="toemail" 
+            name="email" 
             placeholder="to email" 
             required 
           />
         </div>
-        <br></br>
+        <br />
+
         <form className="contact-form">
           <div className="report-form-group">
             <div><label htmlFor="name">NAME:</label></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <div><input className='in-name'
-              id="name"
-              type="text" 
-              name="name" 
-              placeholder="name" 
-              required 
-            /></div>
+            <div>
+              <input 
+                className='in-name'
+                id="name"
+                type="text" 
+                name="name" 
+                placeholder="name" 
+                value={user ? user.username : ''} 
+                required 
+              />
+            </div>
           </div>
 
           <div className="report-form-group">
-            <label htmlFor="email">EMAIL:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <label htmlFor="from-email">EMAIL:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <input 
               id="email"
               type="email" 
-              name="email" 
-              placeholder="email" 
+              name="fromemail" 
+              placeholder="from email" 
+              value={user ? user.email : ''}
               required 
             />
           </div>
@@ -82,9 +107,9 @@ const Report = () => {
           </div>
 
           <button type="submit" className="contact-button">SUBMIT</button>
-        </form>
+        </form>  
       </header>
-      <br></br>
+      <br />
       <main className="contact-info">
         <h4 className="x">CONTACT &nbsp;INFORMATION</h4>
         <p>Email: support@zoovoyage.com</p>

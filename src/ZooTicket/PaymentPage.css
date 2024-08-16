@@ -9,7 +9,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(135deg,#f7eece 25%, #B69E4A 75%);
+  background: linear-gradient(135deg,#f7eece 25%, #d6bf6b 75%);
 }
 
 .payment-page {
@@ -36,7 +36,7 @@
 .payment-page h2 {
   text-align: center;
   margin-bottom: 20px;
-  color: #4A0A1A;;
+  color: #3b3e15;
   font-size: 19px;
 }
 
