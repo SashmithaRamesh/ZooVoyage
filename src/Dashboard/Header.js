@@ -46,7 +46,7 @@ function Header(props) {
             },
           }}
         >
-          {/*{user.username.charAt(0)}*/}
+          {user.username.charAt(0)}
         </Button>
         </Link>
         
